@@ -4,12 +4,9 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>
-        Turski sa stilom | Kurs turskog jezika by Marija
-    </title>
+    <title>Turski sa stilom | Kurs turskog jezika by Marija</title>
 
     <meta
         name="description"
@@ -17,10 +14,7 @@
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Parisienne&display=swap"
@@ -79,15 +73,21 @@
             left: 0;
             width: 100%;
             height: 36px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             padding: 0 5%;
+
             background: rgba(0,0,0,0.78);
             color: white;
+
             z-index: 50;
+
             font-size: 11px;
             letter-spacing: .5px;
+
             border-bottom: 1px solid rgba(255,255,255,.12);
         }
 
@@ -116,18 +116,65 @@
         .social {
             width: 22px;
             height: 22px;
+
             border: 1px solid rgba(255,255,255,.3);
             border-radius: 50%;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             font-size: 9px;
+
             transition: .3s;
         }
 
         .social:hover {
             background: var(--gold);
             border-color: var(--gold);
+        }
+
+
+        /* =========================================
+           LANGUAGE SWITCHER
+        ========================================= */
+
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: 5px;
+        }
+
+        .language-button {
+            border: 1px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.05);
+
+            color: white;
+
+            height: 23px;
+            padding: 0 7px;
+
+            border-radius: 3px;
+
+            cursor: pointer;
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+
+            transition: .3s;
+        }
+
+        .language-button:hover {
+            border-color: var(--gold-light);
+            color: var(--gold-light);
+        }
+
+        .language-button.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: #111;
         }
 
 
@@ -141,13 +188,20 @@
             left: 0;
             width: 100%;
             height: 86px;
+
             background: rgba(0,0,0,.88);
+
             z-index: 40;
+
             display: grid;
             grid-template-columns: 1fr 190px 1fr;
+
             align-items: center;
+
             padding: 0 5%;
+
             color: white;
+
             border-bottom: 1px solid rgba(255,255,255,.1);
         }
 
@@ -164,22 +218,30 @@
 
         .nav-link {
             position: relative;
+
             font-size: 11px;
             font-weight: 500;
+
             letter-spacing: 1px;
             text-transform: uppercase;
+
             opacity: .9;
+
             transition: .3s;
         }
 
         .nav-link::after {
             content: "";
+
             position: absolute;
             left: 0;
             bottom: -10px;
+
             width: 0;
             height: 1px;
+
             background: var(--gold-light);
+
             transition: .3s;
         }
 
@@ -198,39 +260,54 @@
 
         .logo {
             position: relative;
+
             height: 75px;
+
             display: flex;
             flex-direction: column;
+
             align-items: center;
             justify-content: center;
+
             color: white;
+
             text-align: center;
         }
 
         .logo-icon {
             position: relative;
+
             width: 45px;
             height: 35px;
+
             margin-bottom: 3px;
+
             color: var(--gold-light);
         }
 
         .logo-icon .dome {
             position: absolute;
+
             left: 12px;
             bottom: 6px;
+
             width: 22px;
             height: 17px;
+
             border: 1px solid var(--gold-light);
+
             border-radius: 50% 50% 0 0;
         }
 
         .logo-icon .minaret-left,
         .logo-icon .minaret-right {
             position: absolute;
+
             bottom: 4px;
+
             width: 1px;
             height: 28px;
+
             background: var(--gold-light);
         }
 
@@ -245,9 +322,12 @@
         .logo-icon .tip-left,
         .logo-icon .tip-right {
             position: absolute;
+
             width: 4px;
             height: 4px;
+
             border-radius: 50%;
+
             background: var(--gold-light);
         }
 
@@ -263,16 +343,22 @@
 
         .logo-main {
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 22px;
             line-height: .8;
+
             letter-spacing: 3px;
+
             font-weight: 600;
         }
 
         .logo-sub {
             font-size: 7px;
+
             letter-spacing: 4px;
+
             margin-top: 8px;
+
             color: var(--gold-light);
         }
 
@@ -283,12 +369,17 @@
 
         .hero {
             position: relative;
+
             min-height: 100vh;
             height: 900px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             text-align: center;
+
             color: white;
 
             background-image:
@@ -305,6 +396,7 @@
 
         .hero::before {
             content: "";
+
             position: absolute;
             inset: 0;
 
@@ -320,134 +412,201 @@
 
         .hero-content {
             position: relative;
+
             z-index: 5;
+
             max-width: 1050px;
+
             padding: 170px 25px 80px;
         }
 
         .hero-kicker {
             font-size: 12px;
+
             letter-spacing: 6px;
+
             text-transform: uppercase;
+
             color: var(--gold-light);
+
             margin-bottom: 25px;
+
             font-weight: 500;
         }
 
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
+
             font-weight: 500;
+
             font-size: clamp(70px, 10vw, 145px);
+
             line-height: .75;
+
             letter-spacing: -4px;
+
             text-transform: uppercase;
+
             text-shadow: 0 8px 30px rgba(0,0,0,.4);
         }
 
         .hero h1 span {
             display: block;
+
             font-family: 'Montserrat', sans-serif;
+
             font-size: clamp(27px, 4vw, 55px);
+
             font-weight: 300;
+
             letter-spacing: 13px;
+
             margin-top: 30px;
+
             color: white;
         }
 
         .hero-author {
             font-family: 'Parisienne', cursive;
+
             font-size: 38px;
+
             color: var(--gold-light);
+
             margin-top: 30px;
         }
 
         .hero-divider {
             width: 170px;
             height: 1px;
+
             background: var(--gold-light);
+
             margin: 25px auto;
         }
 
         .hero-description {
             max-width: 620px;
+
             margin: auto;
+
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 25px;
+
             line-height: 1.35;
+
             text-shadow: 0 3px 15px rgba(0,0,0,.6);
         }
 
         .hero-description strong {
             display: block;
+
             font-family: 'Parisienne', cursive;
+
             font-size: 32px;
+
             font-weight: 400;
+
             color: var(--gold-light);
+
             margin-top: 5px;
         }
 
         .hero-buttons {
             display: flex;
+
             justify-content: center;
+
             gap: 14px;
+
             margin-top: 38px;
         }
 
         .button {
             display: inline-flex;
+
             align-items: center;
             justify-content: center;
+
             min-width: 190px;
+
             padding: 17px 27px;
+
             font-size: 10px;
+
             font-weight: 600;
+
             letter-spacing: 2px;
+
             text-transform: uppercase;
+
             transition: .35s;
         }
 
         .button-primary {
             background: var(--burgundy);
+
             color: white;
+
             border: 1px solid var(--burgundy);
         }
 
         .button-primary:hover {
             background: var(--burgundy-dark);
+
             transform: translateY(-3px);
         }
 
         .button-outline {
             border: 1px solid rgba(255,255,255,.7);
+
             color: white;
+
             background: rgba(0,0,0,.15);
+
             backdrop-filter: blur(5px);
         }
 
         .button-outline:hover {
             background: white;
+
             color: #111;
+
             transform: translateY(-3px);
         }
 
         .hero-scroll {
             position: absolute;
+
             bottom: 30px;
+
             left: 50%;
+
             transform: translateX(-50%);
+
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
+
             gap: 8px;
+
             font-size: 9px;
+
             letter-spacing: 3px;
+
             text-transform: uppercase;
+
             opacity: .8;
         }
 
         .scroll-line {
             width: 1px;
+
             height: 45px;
+
             background: var(--gold-light);
         }
 
@@ -458,21 +617,32 @@
 
         .info-bar {
             position: relative;
+
             z-index: 10;
+
             background: var(--burgundy);
+
             color: white;
+
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
             padding: 0 5%;
         }
 
         .info-item {
             min-height: 120px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             gap: 15px;
+
             border-right: 1px solid rgba(255,255,255,.18);
+
             text-align: left;
         }
 
@@ -482,21 +652,29 @@
 
         .info-icon {
             color: var(--gold-light);
+
             font-size: 27px;
+
             font-family: 'Cormorant Garamond', serif;
         }
 
         .info-text strong {
             display: block;
+
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 21px;
+
             font-weight: 500;
         }
 
         .info-text span {
             display: block;
+
             font-size: 10px;
+
             opacity: .75;
+
             margin-top: 4px;
         }
 
@@ -507,31 +685,44 @@
 
         .section {
             padding: 140px 8%;
+
             max-width: 1450px;
+
             margin: auto;
         }
 
         .section-kicker {
             color: var(--gold);
+
             font-size: 10px;
+
             font-weight: 600;
+
             letter-spacing: 4px;
+
             text-transform: uppercase;
+
             margin-bottom: 20px;
         }
 
         .section-title {
             font-family: 'Cormorant Garamond', serif;
+
             font-size: clamp(52px, 6vw, 85px);
+
             font-weight: 500;
+
             line-height: .9;
+
             color: var(--burgundy);
         }
 
         .gold-line {
             width: 130px;
             height: 1px;
+
             background: var(--gold);
+
             margin: 25px 0;
         }
 
@@ -542,14 +733,19 @@
 
         .course-section {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 100px;
+
             align-items: center;
         }
 
         .course-text {
             font-size: 15px;
+
             line-height: 2;
+
             color: #5d5650;
         }
 
@@ -563,12 +759,19 @@
 
         .course-highlight {
             margin-top: 35px;
+
             padding: 28px;
+
             border-left: 2px solid var(--gold);
+
             background: rgba(255,255,255,.35);
+
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 23px;
+
             line-height: 1.35;
+
             color: var(--burgundy);
         }
 
@@ -579,15 +782,21 @@
 
         .marija-section {
             background: #e9ddce;
+
             max-width: none;
+
             padding: 140px 10%;
+
             display: grid;
+
             grid-template-columns: 45% 55%;
+
             align-items: center;
         }
 
         .marija-photo-wrap {
             display: flex;
+
             justify-content: center;
         }
 
@@ -603,24 +812,34 @@
                 url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=90");
 
             background-size: cover;
+
             background-position: center;
+
             border: 12px solid var(--cream);
 
             box-shadow:
                 0 25px 70px rgba(0,0,0,.2);
 
             transform: rotate(-2deg);
+
             position: relative;
         }
 
         .marija-photo::after {
             content: "Marija";
+
             position: absolute;
+
             right: -55px;
+
             bottom: 30px;
+
             font-family: 'Parisienne', cursive;
+
             color: var(--burgundy);
+
             font-size: 37px;
+
             transform: rotate(-8deg);
         }
 
@@ -630,23 +849,33 @@
 
         .marija-content h2 {
             font-family: 'Parisienne', cursive;
+
             font-weight: 400;
+
             color: var(--burgundy);
+
             font-size: 78px;
+
             line-height: .9;
         }
 
         .marija-content p {
             font-size: 14px;
+
             line-height: 1.9;
+
             color: #5b554f;
+
             margin-bottom: 20px;
         }
 
         .signature {
             font-family: 'Parisienne', cursive;
+
             font-size: 28px !important;
+
             color: var(--burgundy) !important;
+
             margin-top: 25px;
         }
 
@@ -657,14 +886,19 @@
 
         .method-section {
             background: var(--black);
+
             color: white;
+
             max-width: none;
+
             padding: 130px 8%;
         }
 
         .method-header {
             text-align: center;
+
             max-width: 750px;
+
             margin: auto auto 70px;
         }
 
@@ -678,14 +912,19 @@
 
         .method-grid {
             max-width: 1250px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
         }
 
         .method-card {
             padding: 45px 30px;
+
             text-align: center;
+
             border-right: 1px solid rgba(255,255,255,.15);
         }
 
@@ -695,73 +934,30 @@
 
         .method-number {
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 48px;
+
             color: var(--gold-light);
+
             margin-bottom: 15px;
         }
 
         .method-card h3 {
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 25px;
+
             font-weight: 500;
+
             margin-bottom: 13px;
         }
 
         .method-card p {
             font-size: 11px;
+
             line-height: 1.8;
+
             color: rgba(255,255,255,.62);
-        }
-
-
-        /* =========================================
-           ISTANBUL QUOTE
-        ========================================= */
-
-        .istanbul-section {
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-
-            background-image:
-                linear-gradient(
-                    rgba(0,0,0,.45),
-                    rgba(0,0,0,.62)
-                ),
-                url("https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=2200&q=90");
-
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            padding: 100px 25px;
-        }
-
-        .istanbul-content {
-            max-width: 850px;
-        }
-
-        .istanbul-content .small {
-            font-size: 10px;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--gold-light);
-        }
-
-        .istanbul-content h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-            font-size: clamp(55px, 8vw, 100px);
-            line-height: .85;
-            margin: 25px 0;
-        }
-
-        .istanbul-content p {
-            font-family: 'Parisienne', cursive;
-            font-size: 32px;
-            color: var(--gold-light);
         }
 
 
@@ -771,6 +967,7 @@
 
         .contact-section {
             text-align: center;
+
             padding: 150px 25px;
         }
 
@@ -780,8 +977,11 @@
 
         .contact-section p:not(.section-kicker) {
             max-width: 600px;
+
             margin: 0 auto 35px;
+
             color: #625a53;
+
             line-height: 1.8;
         }
 
@@ -796,49 +996,71 @@
 
         footer {
             background: #050505;
+
             color: white;
+
             padding: 70px 5% 30px;
+
             text-align: center;
         }
 
         .footer-logo {
             display: flex;
+
             flex-direction: column;
+
             align-items: center;
+
             margin-bottom: 20px;
         }
 
         .footer-logo-main {
             font-family: 'Cormorant Garamond', serif;
+
             font-size: 30px;
+
             letter-spacing: 4px;
         }
 
         .footer-logo-sub {
             font-size: 8px;
+
             letter-spacing: 5px;
+
             color: var(--gold-light);
+
             margin-top: 7px;
         }
 
         .footer-description {
             color: rgba(255,255,255,.55);
+
             font-size: 11px;
+
             margin-bottom: 30px;
         }
 
         .footer-links {
             display: flex;
+
             justify-content: center;
+
             gap: 35px;
+
             margin-bottom: 45px;
+
+            flex-wrap: wrap;
         }
 
         .footer-links a {
             font-size: 10px;
+
             letter-spacing: 1px;
+
             text-transform: uppercase;
+
             color: rgba(255,255,255,.75);
+
             transition: .3s;
         }
 
@@ -848,9 +1070,13 @@
 
         .copyright {
             border-top: 1px solid rgba(255,255,255,.12);
+
             padding-top: 25px;
+
             color: rgba(255,255,255,.35);
+
             font-size: 9px;
+
             letter-spacing: 1px;
         }
 
@@ -863,17 +1089,25 @@
 
             .topbar {
                 justify-content: center;
+
                 font-size: 9px;
             }
 
-            .topbar-right {
+            .topbar-left {
                 display: none;
+            }
+
+            .topbar-right {
+                gap: 10px;
             }
 
             .navbar {
                 grid-template-columns: 1fr;
+
                 height: 95px;
+
                 top: 36px;
+
                 justify-items: center;
             }
 
@@ -888,7 +1122,9 @@
 
             .hero {
                 height: 820px;
+
                 min-height: 820px;
+
                 background-attachment: scroll;
             }
 
@@ -898,17 +1134,21 @@
 
             .hero h1 {
                 font-size: 76px;
+
                 letter-spacing: -2px;
             }
 
             .hero h1 span {
                 font-size: 27px;
+
                 letter-spacing: 6px;
             }
 
             .hero-buttons {
                 flex-direction: column;
+
                 max-width: 280px;
+
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -919,6 +1159,7 @@
 
             .info-item {
                 min-height: 100px;
+
                 border-bottom: 1px solid rgba(255,255,255,.15);
             }
 
@@ -929,6 +1170,7 @@
             .course-section,
             .marija-section {
                 grid-template-columns: 1fr;
+
                 gap: 60px;
             }
 
@@ -953,13 +1195,21 @@
                 font-size: 8px;
             }
 
+            .language-button {
+                font-size: 9px;
+
+                padding: 0 6px;
+            }
+
             .hero {
                 height: 760px;
+
                 min-height: 760px;
             }
 
             .hero-kicker {
                 font-size: 9px;
+
                 letter-spacing: 4px;
             }
 
@@ -969,7 +1219,9 @@
 
             .hero h1 span {
                 font-size: 23px;
+
                 letter-spacing: 4px;
+
                 margin-top: 22px;
             }
 
@@ -991,6 +1243,7 @@
 
             .info-item {
                 border-right: none;
+
                 border-bottom: 1px solid rgba(255,255,255,.15);
             }
 
@@ -1008,11 +1261,13 @@
 
             .marija-photo {
                 width: 280px;
+
                 height: 390px;
             }
 
             .marija-photo::after {
                 right: -25px;
+
                 font-size: 30px;
             }
 
@@ -1030,6 +1285,7 @@
 
             .method-card {
                 border-right: none !important;
+
                 border-bottom: 1px solid rgba(255,255,255,.15);
             }
 
@@ -1037,17 +1293,9 @@
                 border-bottom: none;
             }
 
-            .istanbul-section {
-                min-height: 500px;
-                background-attachment: scroll;
-            }
-
-            .istanbul-content h2 {
-                font-size: 65px;
-            }
-
             .footer-links {
                 flex-direction: column;
+
                 gap: 18px;
             }
         }
@@ -1068,15 +1316,13 @@
 
         <div class="topbar-left">
 
-            <span>
+            <span data-i18n="topTitle">
                 Turski sa stilom
             </span>
 
-            <span>
-                |
-            </span>
+            <span>|</span>
 
-            <span>
+            <span data-i18n="topSubtitle">
                 Kurs turskog jezika
             </span>
 
@@ -1085,29 +1331,49 @@
 
         <div class="topbar-right">
 
-            <a href="#kontakt">
+            <a href="#kontakt" data-i18n="login">
                 Prijava
             </a>
 
             <span>|</span>
 
-            <a href="#kontakt">
+            <a href="#kontakt" data-i18n="contact">
                 Kontakt
             </a>
 
+
+            <!-- JEZICI -->
+
+            <div class="language-switcher">
+
+                <button
+                    class="language-button active"
+                    id="srBtn"
+                    onclick="setLanguage('sr')"
+                    title="Srpski"
+                >
+                    🇷🇸 SR
+                </button>
+
+                <button
+                    class="language-button"
+                    id="trBtn"
+                    onclick="setLanguage('tr')"
+                    title="Türkçe"
+                >
+                    🇹🇷 TR
+                </button>
+
+            </div>
+
+
             <div class="socials">
 
-                <a href="#" class="social">
-                    f
-                </a>
+                <a href="#" class="social">f</a>
 
-                <a href="#" class="social">
-                    ◎
-                </a>
+                <a href="#" class="social">◎</a>
 
-                <a href="#" class="social">
-                    ▶
-                </a>
+                <a href="#" class="social">▶</a>
 
             </div>
 
@@ -1126,15 +1392,27 @@
 
         <nav class="nav-left">
 
-            <a href="#pocetna" class="nav-link">
+            <a
+                href="#pocetna"
+                class="nav-link"
+                data-i18n="navHome"
+            >
                 Početna
             </a>
 
-            <a href="#kurs" class="nav-link">
+            <a
+                href="#kurs"
+                class="nav-link"
+                data-i18n="navCourse"
+            >
                 Kurs
             </a>
 
-            <a href="#marija" class="nav-link">
+            <a
+                href="#marija"
+                class="nav-link"
+                data-i18n="navMarija"
+            >
                 O Mariji
             </a>
 
@@ -1174,11 +1452,19 @@
 
         <nav class="nav-right">
 
-            <a href="#metod" class="nav-link">
+            <a
+                href="#metod"
+                class="nav-link"
+                data-i18n="navMethod"
+            >
                 Kako učimo
             </a>
 
-            <a href="#kontakt" class="nav-link">
+            <a
+                href="#kontakt"
+                class="nav-link"
+                data-i18n="navContact"
+            >
                 Kontakt
             </a>
 
@@ -1201,7 +1487,10 @@
             <div class="hero-content">
 
 
-                <div class="hero-kicker">
+                <div
+                    class="hero-kicker"
+                    data-i18n="heroKicker"
+                >
                     KURS TURSKOG JEZIKA
                 </div>
 
@@ -1227,10 +1516,12 @@
 
                 <div class="hero-description">
 
-                    Nauči turski.
-                    Razumi ga.
+                    <span data-i18n="heroText">
+                        Nauči turski.
+                        Razumi ga.
+                    </span>
 
-                    <strong>
+                    <strong data-i18n="heroStrong">
                         Govori ga sa stilom.
                     </strong>
 
@@ -1242,6 +1533,7 @@
                     <a
                         href="#kurs"
                         class="button button-primary"
+                        data-i18n="startCourse"
                     >
                         Započni kurs
                     </a>
@@ -1250,6 +1542,7 @@
                     <a
                         href="#marija"
                         class="button button-outline"
+                        data-i18n="meetMarija"
                     >
                         Upoznaj Mariju
                     </a>
@@ -1262,7 +1555,7 @@
 
             <div class="hero-scroll">
 
-                <span>
+                <span data-i18n="discover">
                     Discover
                 </span>
 
@@ -1290,11 +1583,11 @@
 
                 <div class="info-text">
 
-                    <strong>
+                    <strong data-i18n="feature1Title">
                         Komunikacija
                     </strong>
 
-                    <span>
+                    <span data-i18n="feature1Text">
                         Govoriš kroz stvarne situacije
                     </span>
 
@@ -1312,11 +1605,11 @@
 
                 <div class="info-text">
 
-                    <strong>
+                    <strong data-i18n="feature2Title">
                         Praktično
                     </strong>
 
-                    <span>
+                    <span data-i18n="feature2Text">
                         Učiš ono što zaista koristiš
                     </span>
 
@@ -1334,11 +1627,11 @@
 
                 <div class="info-text">
 
-                    <strong>
+                    <strong data-i18n="feature3Title">
                         Jasno
                     </strong>
 
-                    <span>
+                    <span data-i18n="feature3Text">
                         Bez komplikovane gramatike
                     </span>
 
@@ -1356,11 +1649,11 @@
 
                 <div class="info-text">
 
-                    <strong>
+                    <strong data-i18n="feature4Title">
                         Sa stilom
                     </strong>
 
-                    <span>
+                    <span data-i18n="feature4Text">
                         Prirodni izrazi i turske nijanse
                     </span>
 
@@ -1382,16 +1675,20 @@
 
             <div>
 
-                <div class="section-kicker">
+                <div
+                    class="section-kicker"
+                    data-i18n="courseKicker"
+                >
                     ZAŠTO TURSKI?
                 </div>
 
 
-                <h2 class="section-title">
-
+                <h2
+                    class="section-title"
+                    data-i18n="courseTitle"
+                >
                     Ne uči turski
                     samo da bi ga znao.
-
                 </h2>
 
 
@@ -1403,12 +1700,12 @@
 
             <div class="course-text">
 
-                <p>
+                <p data-i18n="courseText1">
                     Uči ga da bi mogao da ga koristiš.
                 </p>
 
 
-                <p>
+                <p data-i18n="courseText2">
                     Da naručiš kafu u Istanbulu bez razmišljanja.
                     Da razumeš ljude oko sebe.
                     Da vodiš razgovor.
@@ -1416,19 +1713,20 @@
                 </p>
 
 
-                <p>
+                <p data-i18n="courseText3">
                     Turski nije samo skup pravila.
                     To je jezik koji treba da čuješ,
                     razumeš i počneš da koristiš.
                 </p>
 
 
-                <div class="course-highlight">
-
+                <div
+                    class="course-highlight"
+                    data-i18n="courseHighlight"
+                >
                     „Cilj nije da samo znaš turski.
                     Cilj je da se na turskom
                     osećaš prirodno.“
-
                 </div>
 
             </div>
@@ -1456,7 +1754,10 @@
             <div class="marija-content">
 
 
-                <div class="section-kicker">
+                <div
+                    class="section-kicker"
+                    data-i18n="marijaKicker"
+                >
                     ĆAO, JA SAM
                 </div>
 
@@ -1469,20 +1770,20 @@
                 <div class="gold-line"></div>
 
 
-                <p>
+                <p data-i18n="marijaText1">
                     Diplomirani turkolog i zaljubljenik
                     u turski jezik.
                 </p>
 
 
-                <p>
+                <p data-i18n="marijaText2">
                     Turski je deo mog obrazovanja,
                     ali još više — deo mog svakodnevnog
                     života i komunikacije.
                 </p>
 
 
-                <p>
+                <p data-i18n="marijaText3">
                     Ovaj kurs nije nastao da bi te
                     zatrpao pravilima, već da bi ti
                     pomogao/la da razumeš jezik i koristiš
@@ -1490,14 +1791,17 @@
                 </p>
 
 
-                <p>
+                <p data-i18n="marijaText4">
                     Verujem da se jezik uči korak po korak,
                     kroz praksu, ponavljanje i uživanje
                     u procesu.
                 </p>
 
 
-                <p class="signature">
+                <p
+                    class="signature"
+                    data-i18n="signature"
+                >
                     Hajde da turski naučimo —
                     sa stilom. ♡
                 </p>
@@ -1520,12 +1824,18 @@
             <div class="method-header">
 
 
-                <div class="section-kicker">
+                <div
+                    class="section-kicker"
+                    data-i18n="methodKicker"
+                >
                     KAKO UČIMO?
                 </div>
 
 
-                <h2 class="section-title">
+                <h2
+                    class="section-title"
+                    data-i18n="methodTitle"
+                >
                     Jednostavno.
                     Praktično.
                     Prirodno.
@@ -1538,7 +1848,10 @@
                 ></div>
 
 
-                <p style="color:rgba(255,255,255,.6);line-height:1.8;font-size:13px;">
+                <p
+                    data-i18n="methodIntro"
+                    style="color:rgba(255,255,255,.6);line-height:1.8;font-size:13px;"
+                >
                     Bez zatrpavanja informacijama.
                     Bez učenja napamet bez razloga.
                     Fokus je na tome da turski
@@ -1558,11 +1871,11 @@
                         01
                     </div>
 
-                    <h3>
+                    <h3 data-i18n="method1Title">
                         Razumi
                     </h3>
 
-                    <p>
+                    <p data-i18n="method1Text">
                         Upoznaj strukturu jezika
                         i shvati kako turski
                         zapravo funkcioniše.
@@ -1578,11 +1891,11 @@
                         02
                     </div>
 
-                    <h3>
+                    <h3 data-i18n="method2Title">
                         Vežbaj
                     </h3>
 
-                    <p>
+                    <p data-i18n="method2Text">
                         Nauči fraze i izraze
                         koje možeš odmah
                         da koristiš.
@@ -1598,11 +1911,11 @@
                         03
                     </div>
 
-                    <h3>
+                    <h3 data-i18n="method3Title">
                         Govori
                     </h3>
 
-                    <p>
+                    <p data-i18n="method3Text">
                         Kroz praktične situacije
                         počni da sklapaš
                         svoje rečenice.
@@ -1618,11 +1931,11 @@
                         04
                     </div>
 
-                    <h3>
+                    <h3 data-i18n="method4Title">
                         Zavoli
                     </h3>
 
-                    <p>
+                    <p data-i18n="method4Text">
                         Kada razumeš jezik,
                         počinješ da uživaš
                         u njemu.
@@ -1639,51 +1952,24 @@
 
 
         <!-- =====================================
-             ISTANBUL
-        ====================================== -->
-
-        <section id="istanbul" class="istanbul-section">
-
-
-            <div class="istanbul-content">
-
-
-                <div class="small">
-                    BIR DIL, BIR DÜNYA
-                </div>
-
-
-                <h2>
-                    İstanbul
-                </h2>
-
-
-                <p>
-                    Jezik je najlepši kada
-                    postane deo tvog života.
-                </p>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- =====================================
              CONTACT
         ====================================== -->
 
         <section id="kontakt" class="contact-section">
 
 
-            <div class="section-kicker">
+            <div
+                class="section-kicker"
+                data-i18n="contactKicker"
+            >
                 MERHABA
             </div>
 
 
-            <h2 class="section-title">
+            <h2
+                class="section-title"
+                data-i18n="contactTitle"
+            >
                 Spreman za prvi korak?
             </h2>
 
@@ -1691,7 +1977,7 @@
             <div class="gold-line"></div>
 
 
-            <p>
+            <p data-i18n="contactText">
                 Učimo turski zajedno —
                 jasno, praktično i sa stilom.
             </p>
@@ -1700,6 +1986,7 @@
             <a
                 href="mailto:kontakt@turksisastilom.rs"
                 class="button button-primary"
+                data-i18n="contactButton"
             >
                 Kontaktiraj Mariju
             </a>
@@ -1732,46 +2019,384 @@
         </div>
 
 
-        <p class="footer-description">
+        <p
+            class="footer-description"
+            data-i18n="footerDescription"
+        >
             Kurs turskog jezika by Marija
         </p>
 
 
         <div class="footer-links">
 
-            <a href="#pocetna">
+            <a href="#pocetna" data-i18n="navHome">
                 Početna
             </a>
 
-            <a href="#kurs">
+            <a href="#kurs" data-i18n="navCourse">
                 Kurs
             </a>
 
-            <a href="#marija">
+            <a href="#marija" data-i18n="navMarija">
                 O Mariji
             </a>
 
-            <a href="#metod">
+            <a href="#metod" data-i18n="navMethod">
                 Kako učimo
             </a>
 
-            <a href="#istanbul">
-                Istanbul
-            </a>
-
-            <a href="#kontakt">
+            <a href="#kontakt" data-i18n="navContact">
                 Kontakt
             </a>
 
         </div>
 
 
-        <div class="copyright">
+        <div
+            class="copyright"
+            data-i18n="copyright"
+        >
             © 2026 Turski sa stilom. Sva prava zadržana.
         </div>
 
 
     </footer>
+
+
+
+    <!-- =====================================
+         LANGUAGE SYSTEM
+    ====================================== -->
+
+    <script>
+
+        const translations = {
+
+            sr: {
+
+                topTitle: "Turski sa stilom",
+                topSubtitle: "Kurs turskog jezika",
+
+                login: "Prijava",
+                contact: "Kontakt",
+
+                navHome: "Početna",
+                navCourse: "Kurs",
+                navMarija: "O Mariji",
+                navMethod: "Kako učimo",
+                navContact: "Kontakt",
+
+                heroKicker: "KURS TURSKOG JEZIKA",
+
+                heroText: "Nauči turski. Razumi ga.",
+
+                heroStrong: "Govori ga sa stilom.",
+
+                startCourse: "Započni kurs",
+                meetMarija: "Upoznaj Mariju",
+
+                discover: "Otkrij",
+
+                feature1Title: "Komunikacija",
+                feature1Text: "Govoriš kroz stvarne situacije",
+
+                feature2Title: "Praktično",
+                feature2Text: "Učiš ono što zaista koristiš",
+
+                feature3Title: "Jasno",
+                feature3Text: "Bez komplikovane gramatike",
+
+                feature4Title: "Sa stilom",
+                feature4Text: "Prirodni izrazi i turske nijanse",
+
+                courseKicker: "ZAŠTO TURSKI?",
+
+                courseTitle:
+                    "Ne uči turski samo da bi ga znao.",
+
+                courseText1:
+                    "Uči ga da bi mogao da ga koristiš.",
+
+                courseText2:
+                    "Da naručiš kafu u Istanbulu bez razmišljanja. Da razumeš ljude oko sebe. Da vodiš razgovor. Da razumeš izraze koje Turci zaista koriste.",
+
+                courseText3:
+                    "Turski nije samo skup pravila. To je jezik koji treba da čuješ, razumeš i počneš da koristiš.",
+
+                courseHighlight:
+                    "„Cilj nije da samo znaš turski. Cilj je da se na turskom osećaš prirodno.“",
+
+                marijaKicker: "ĆAO, JA SAM",
+
+                marijaText1:
+                    "Diplomirani turkolog i zaljubljenik u turski jezik.",
+
+                marijaText2:
+                    "Turski je deo mog obrazovanja, ali još više — deo mog svakodnevnog života i komunikacije.",
+
+                marijaText3:
+                    "Ovaj kurs nije nastao da bi te zatrpao pravilima, već da bi ti pomogao/la da razumeš jezik i koristiš ga prirodno i samouvereno.",
+
+                marijaText4:
+                    "Verujem da se jezik uči korak po korak, kroz praksu, ponavljanje i uživanje u procesu.",
+
+                signature:
+                    "Hajde da turski naučimo — sa stilom. ♡",
+
+                methodKicker: "KAKO UČIMO?",
+
+                methodTitle:
+                    "Jednostavno. Praktično. Prirodno.",
+
+                methodIntro:
+                    "Bez zatrpavanja informacijama. Bez učenja napamet bez razloga. Fokus je na tome da turski stvarno počneš da koristiš.",
+
+                method1Title: "Razumi",
+                method1Text:
+                    "Upoznaj strukturu jezika i shvati kako turski zapravo funkcioniše.",
+
+                method2Title: "Vežbaj",
+                method2Text:
+                    "Nauči fraze i izraze koje možeš odmah da koristiš.",
+
+                method3Title: "Govori",
+                method3Text:
+                    "Kroz praktične situacije počni da sklapaš svoje rečenice.",
+
+                method4Title: "Zavoli",
+                method4Text:
+                    "Kada razumeš jezik, počinješ da uživaš u njemu.",
+
+                contactKicker: "MERHABA",
+
+                contactTitle:
+                    "Spreman za prvi korak?",
+
+                contactText:
+                    "Učimo turski zajedno — jasno, praktično i sa stilom.",
+
+                contactButton:
+                    "Kontaktiraj Mariju",
+
+                footerDescription:
+                    "Kurs turskog jezika by Marija",
+
+                copyright:
+                    "© 2026 Turski sa stilom. Sva prava zadržana."
+            },
+
+
+            tr: {
+
+                topTitle: "Türkçe Şık Bir Şekilde",
+
+                topSubtitle:
+                    "Türkçe Dil Kursu",
+
+                login: "Başvuru",
+
+                contact: "İletişim",
+
+                navHome: "Ana Sayfa",
+
+                navCourse: "Kurs",
+
+                navMarija: "Marija Hakkında",
+
+                navMethod: "Nasıl Öğreniyoruz",
+
+                navContact: "İletişim",
+
+                heroKicker:
+                    "TÜRKÇE DİL KURSU",
+
+                heroText:
+                    "Türkçe öğren. Onu anla.",
+
+                heroStrong:
+                    "Türkçeyi şık bir şekilde konuş.",
+
+                startCourse:
+                    "Kursa Başla",
+
+                meetMarija:
+                    "Marija ile Tanış",
+
+                discover:
+                    "Keşfet",
+
+                feature1Title:
+                    "İletişim",
+
+                feature1Text:
+                    "Gerçek hayat durumlarıyla konuş",
+
+                feature2Title:
+                    "Pratik",
+
+                feature2Text:
+                    "Gerçekten kullanacağın şeyleri öğren",
+
+                feature3Title:
+                    "Anlaşılır",
+
+                feature3Text:
+                    "Karmaşık gramer olmadan",
+
+                feature4Title:
+                    "Şık Bir Şekilde",
+
+                feature4Text:
+                    "Doğal ifadeler ve Türkçe incelikler",
+
+                courseKicker:
+                    "NEDEN TÜRKÇE?",
+
+                courseTitle:
+                    "Türkçeyi sadece bilmek için öğrenme.",
+
+                courseText1:
+                    "Onu gerçekten kullanabilmek için öğren.",
+
+                courseText2:
+                    "İstanbul'da düşünmeden kahve sipariş etmek için. Çevrendeki insanları anlamak için. Sohbet edebilmek için. Türklerin gerçekten kullandığı ifadeleri anlamak için.",
+
+                courseText3:
+                    "Türkçe sadece kurallardan ibaret değildir. Onu duyman, anlaman ve kullanmaya başlaman gereken bir dildir.",
+
+                courseHighlight:
+                    "„Amaç sadece Türkçe bilmek değil. Amaç, Türkçe konuşurken kendini doğal hissetmek.“",
+
+                marijaKicker:
+                    "MERHABA, BEN",
+
+                marijaText1:
+                    "Türkolog ve Türkçe tutkunu.",
+
+                marijaText2:
+                    "Türkçe eğitimimin bir parçası, ama bundan da öte günlük hayatımın ve iletişimimin bir parçası.",
+
+                marijaText3:
+                    "Bu kurs seni kurallarla boğmak için değil, dili anlamana ve doğal, özgüvenli bir şekilde kullanmana yardımcı olmak için hazırlandı.",
+
+                marijaText4:
+                    "Bir dilin adım adım, pratik yaparak, tekrar ederek ve süreçten keyif alarak öğrenildiğine inanıyorum.",
+
+                signature:
+                    "Hadi Türkçeyi birlikte öğrenelim — şık bir şekilde. ♡",
+
+                methodKicker:
+                    "NASIL ÖĞRENİYORUZ?",
+
+                methodTitle:
+                    "Basit. Pratik. Doğal.",
+
+                methodIntro:
+                    "Bilgi bombardımanı yok. Gereksiz ezber yok. Odak noktamız Türkçeyi gerçekten kullanmaya başlaman.",
+
+                method1Title:
+                    "Anla",
+
+                method1Text:
+                    "Dilin yapısını keşfet ve Türkçenin nasıl çalıştığını gerçekten anla.",
+
+                method2Title:
+                    "Pratik Yap",
+
+                method2Text:
+                    "Hemen kullanabileceğin ifadeleri ve kalıpları öğren.",
+
+                method3Title:
+                    "Konuş",
+
+                method3Text:
+                    "Pratik durumlar üzerinden kendi cümlelerini kurmaya başla.",
+
+                method4Title:
+                    "Sev",
+
+                method4Text:
+                    "Dili anladığında, onun tadını çıkarmaya başlarsın.",
+
+                contactKicker:
+                    "MERHABA",
+
+                contactTitle:
+                    "İlk adımı atmaya hazır mısın?",
+
+                contactText:
+                    "Türkçeyi birlikte öğrenelim — anlaşılır, pratik ve şık bir şekilde.",
+
+                contactButton:
+                    "Marija ile İletişime Geç",
+
+                footerDescription:
+                    "Marija ile Türkçe Dil Kursu",
+
+                copyright:
+                    "© 2026 Turski sa stilom. Tüm hakları saklıdır."
+            }
+
+        };
+
+
+        function setLanguage(language) {
+
+            document.documentElement.lang = language;
+
+            const elements =
+                document.querySelectorAll("[data-i18n]");
+
+            elements.forEach(element => {
+
+                const key =
+                    element.getAttribute("data-i18n");
+
+                if (translations[language][key]) {
+
+                    element.textContent =
+                        translations[language][key];
+
+                }
+
+            });
+
+
+            document.title =
+                language === "sr"
+                    ? "Turski sa stilom | Kurs turskog jezika by Marija"
+                    : "Türkçe Şık Bir Şekilde | Marija ile Türkçe Kursu";
+
+
+            document.getElementById("srBtn")
+                .classList.toggle(
+                    "active",
+                    language === "sr"
+                );
+
+            document.getElementById("trBtn")
+                .classList.toggle(
+                    "active",
+                    language === "tr"
+                );
+
+
+            localStorage.setItem(
+                "selectedLanguage",
+                language
+            );
+
+        }
+
+
+        /* Zapamti izabrani jezik */
+
+        const savedLanguage =
+            localStorage.getItem("selectedLanguage") || "sr";
+
+        setLanguage(savedLanguage);
+
+    </script>
 
 
 </body>
