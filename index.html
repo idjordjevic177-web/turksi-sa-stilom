@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Turski sa stilom | Kurs turskog jezika by Marija</title>
@@ -22,73 +20,46 @@
     >
 
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================
+<!-- =====================================================
      TOP BAR
-====================================== -->
+===================================================== -->
 
 <div class="topbar">
 
     <div class="topbar-left">
-
-        <span data-sr="Turski sa stilom"
-              data-tr="Türkçe Zarafetle">
-            Turski sa stilom
-        </span>
-
-        <span>|</span>
-
-        <span data-sr="Kurs turskog jezika"
-              data-tr="Türkçe Dil Kursu">
-            Kurs turskog jezika
-        </span>
-
+        <span>Turski sa stilom</span>
+        <span class="top-separator">|</span>
+        <span>Kurs turskog jezika</span>
     </div>
-
 
     <div class="topbar-right">
 
-        <a href="#kontakt"
-           data-sr="Prijava"
-           data-tr="Kayıt">
-            Prijava
-        </a>
+        <a href="#kontakt">Prijava</a>
 
         <span>|</span>
 
-        <a href="#kontakt"
-           data-sr="Kontakt"
-           data-tr="İletişim">
-            Kontakt
-        </a>
-
+        <a href="#kontakt">Kontakt</a>
 
         <!-- JEZIK -->
-
         <div class="language-switcher">
 
             <button
                 class="language-btn active"
-                data-lang="sr"
-                type="button"
-                aria-label="Srpski"
+                id="srBtn"
+                onclick="setLanguage('sr')"
             >
                 <span class="flag flag-serbia"></span>
-                <span>SR</span>
+                <span>RS</span>
             </button>
-
 
             <button
                 class="language-btn"
-                data-lang="tr"
-                type="button"
-                aria-label="Türkçe"
+                id="trBtn"
+                onclick="setLanguage('tr')"
             >
                 <span class="flag flag-turkey"></span>
                 <span>TR</span>
@@ -96,16 +67,14 @@
 
         </div>
 
-
         <!-- SOCIAL -->
-
         <div class="socials">
 
             <a
                 href="https://www.facebook.com/marija.djokic.33"
                 class="social"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 aria-label="Facebook"
             >
                 f
@@ -115,7 +84,7 @@
                 href="https://www.instagram.com/maka_djordjevic13/?hl=en"
                 class="social"
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="noopener"
                 aria-label="Instagram"
             >
                 ◎
@@ -128,42 +97,30 @@
 </div>
 
 
-
-<!-- =====================================
+<!-- =====================================================
      NAVIGATION
-====================================== -->
+===================================================== -->
 
 <header class="navbar">
 
-
     <nav class="nav-left">
 
-        <a href="#pocetna"
-           class="nav-link"
-           data-sr="Početna"
-           data-tr="Ana Sayfa">
+        <a href="#pocetna" class="nav-link" data-sr="Početna" data-tr="Početna">
             Početna
         </a>
 
-        <a href="#kurs"
-           class="nav-link"
-           data-sr="Kurs"
-           data-tr="Kurs">
+        <a href="#kurs" class="nav-link" data-sr="Kurs" data-tr="Kurs">
             Kurs
         </a>
 
-        <a href="#marija"
-           class="nav-link"
-           data-sr="O Mariji"
-           data-tr="Marija Hakkında">
+        <a href="#marija" class="nav-link" data-sr="O Mariji" data-tr="Marija Hakkında">
             O Mariji
         </a>
 
     </nav>
 
 
-
-    <!-- LOGO - OSTAVLJAMO TVOJ POSTOJEĆI -->
+    <!-- LOGO — OSTAVLJEN CSS LOGO -->
 
     <a href="#pocetna" class="logo">
 
@@ -192,20 +149,23 @@
     </a>
 
 
-
     <nav class="nav-right">
 
-        <a href="#metod"
-           class="nav-link"
-           data-sr="Kako učimo"
-           data-tr="Nasıl Öğreniyoruz">
+        <a
+            href="#metod"
+            class="nav-link"
+            data-sr="Kako učimo"
+            data-tr="Nasıl Öğreniyoruz"
+        >
             Kako učimo
         </a>
 
-        <a href="#kontakt"
-           class="nav-link"
-           data-sr="Kontakt"
-           data-tr="İletişim">
+        <a
+            href="#kontakt"
+            class="nav-link"
+            data-sr="Kontakt"
+            data-tr="İletişim"
+        >
             Kontakt
         </a>
 
@@ -214,23 +174,23 @@
 </header>
 
 
-
-<!-- =====================================
+<!-- =====================================================
      HERO
-====================================== -->
+===================================================== -->
 
 <main>
 
-
 <section id="pocetna" class="hero">
 
+    <div class="hero-overlay"></div>
 
     <div class="hero-content">
 
-
-        <div class="hero-kicker"
-             data-sr="KURS TURSKOG JEZIKA"
-             data-tr="TÜRKÇE DİL KURSU">
+        <div
+            class="hero-kicker"
+            data-sr="KURS TURSKOG JEZIKA"
+            data-tr="TÜRKÇE DİL KURSU"
+        >
             KURS TURSKOG JEZIKA
         </div>
 
@@ -246,7 +206,11 @@
         </h1>
 
 
-        <div class="hero-author">
+        <div
+            class="hero-author"
+            data-sr="by Marija"
+            data-tr="by Marija"
+        >
             by Marija
         </div>
 
@@ -265,7 +229,7 @@
 
             <strong
                 data-sr="Govori ga sa stilom."
-                data-tr="Türkçeyi zarafetle konuş."
+                data-tr="Tarzınla konuş."
             >
                 Govori ga sa stilom.
             </strong>
@@ -289,7 +253,7 @@
                 href="#marija"
                 class="button button-outline"
                 data-sr="Upoznaj Mariju"
-                data-tr="Marija ile Tanış"
+                data-tr="Marija'yı Tanı"
             >
                 Upoznaj Mariju
             </a>
@@ -298,22 +262,28 @@
 
     </div>
 
+
+    <!-- PREMIUM SCROLL INDICATOR -->
+    <div class="hero-scroll">
+
+        <span></span>
+
+        <div class="scroll-line"></div>
+
+    </div>
+
 </section>
 
 
-
-<!-- =====================================
-     INFO BAR
-====================================== -->
+<!-- =====================================================
+     PREMIUM INFO BAR
+===================================================== -->
 
 <section class="info-bar">
 
-
     <div class="info-item">
 
-        <div class="info-icon">
-            ♡
-        </div>
+        <div class="info-icon">♡</div>
 
         <div class="info-text">
 
@@ -326,7 +296,7 @@
 
             <span
                 data-sr="Govoriš kroz stvarne situacije"
-                data-tr="Gerçek hayat durumlarıyla konuş"
+                data-tr="Gerçek hayat üzerinden konuş"
             >
                 Govoriš kroz stvarne situacije
             </span>
@@ -336,12 +306,9 @@
     </div>
 
 
-
     <div class="info-item">
 
-        <div class="info-icon">
-            ✦
-        </div>
+        <div class="info-icon">✦</div>
 
         <div class="info-text">
 
@@ -364,12 +331,9 @@
     </div>
 
 
-
     <div class="info-item">
 
-        <div class="info-icon">
-            ✎
-        </div>
+        <div class="info-icon">✎</div>
 
         <div class="info-text">
 
@@ -392,25 +356,22 @@
     </div>
 
 
-
     <div class="info-item">
 
-        <div class="info-icon">
-            ♡
-        </div>
+        <div class="info-icon">♡</div>
 
         <div class="info-text">
 
             <strong
                 data-sr="Sa stilom"
-                data-tr="Zarafetle"
+                data-tr="Tarzıyla"
             >
                 Sa stilom
             </strong>
 
             <span
                 data-sr="Prirodni izrazi i turske nijanse"
-                data-tr="Doğal ifadeler ve Türkçe incelikler"
+                data-tr="Doğal ifadeler ve Türkçe incelikleri"
             >
                 Prirodni izrazi i turske nijanse
             </span>
@@ -419,19 +380,16 @@
 
     </div>
 
-
 </section>
 
 
-
-<!-- =====================================
+<!-- =====================================================
      KURS
-====================================== -->
+===================================================== -->
 
 <section id="kurs" class="section course-section">
 
-
-    <div>
+    <div class="course-heading">
 
         <div
             class="section-kicker"
@@ -456,12 +414,11 @@
     </div>
 
 
-
     <div class="course-text">
 
         <p
             data-sr="Uči ga da bi mogao da ga koristiš."
-            data-tr="Onu kullanabilmek için öğren."
+            data-tr="Türkçeyi kullanabilmek için öğren."
         >
             Uči ga da bi mogao da ga koristiš.
         </p>
@@ -469,7 +426,7 @@
 
         <p
             data-sr="Da naručiš kafu u Istanbulu bez razmišljanja. Da razumeš ljude oko sebe. Da vodiš razgovor. Da razumeš izraze koje Turci zaista koriste."
-            data-tr="İstanbul'da hiç düşünmeden kahve sipariş edebilmek. Çevrendeki insanları anlayabilmek. Sohbet edebilmek. Türklerin gerçekten kullandığı ifadeleri anlayabilmek."
+            data-tr="İstanbul'da kahveni düşünmeden sipariş edebilmek, çevrendeki insanları anlayabilmek ve gerçek bir sohbet kurabilmek için."
         >
             Da naručiš kafu u Istanbulu bez razmišljanja.
             Da razumeš ljude oko sebe.
@@ -480,7 +437,7 @@
 
         <p
             data-sr="Turski nije samo skup pravila. To je jezik koji treba da čuješ, razumeš i počneš da koristiš."
-            data-tr="Türkçe sadece kurallardan oluşan bir dil değildir. Onu duyman, anlaman ve kullanmaya başlaman gerekir."
+            data-tr="Türkçe sadece kurallardan ibaret değildir. Onu duymalı, anlamalı ve kullanmaya başlamalısın."
         >
             Turski nije samo skup pravila.
             To je jezik koji treba da čuješ,
@@ -492,7 +449,7 @@
 
             <span
                 data-sr="„Cilj nije da samo znaš turski. Cilj je da se na turskom osećaš prirodno.“"
-                data-tr="“Amaç sadece Türkçe bilmek değil. Amaç Türkçe konuşurken kendini doğal hissetmek.”"
+                data-tr="“Amaç sadece Türkçe bilmek değil. Türkçe konuşurken kendini doğal hissetmek.”"
             >
                 „Cilj nije da samo znaš turski.
                 Cilj je da se na turskom
@@ -503,17 +460,14 @@
 
     </div>
 
-
 </section>
 
 
-
-<!-- =====================================
-     MARIJA
-====================================== -->
+<!-- =====================================================
+     MARija
+===================================================== -->
 
 <section id="marija" class="marija-section">
-
 
     <div class="marija-photo-wrap">
 
@@ -522,9 +476,7 @@
     </div>
 
 
-
     <div class="marija-content">
-
 
         <div
             class="section-kicker"
@@ -564,7 +516,7 @@
 
         <p
             data-sr="Ovaj kurs nije nastao da bi te zatrpao pravilima, već da bi ti pomogao/la da razumeš jezik i koristiš ga prirodno i samouvereno."
-            data-tr="Bu kurs seni kurallara boğmak için değil, dili anlamana ve onu doğal ve özgüvenli bir şekilde kullanmana yardımcı olmak için hazırlandı."
+            data-tr="Bu kurs seni kurallara boğmak için değil, dili anlamana ve doğal, özgüvenli bir şekilde kullanmana yardımcı olmak için hazırlandı."
         >
             Ovaj kurs nije nastao da bi te
             zatrpao pravilima, već da bi ti
@@ -575,7 +527,7 @@
 
         <p
             data-sr="Verujem da se jezik uči korak po korak, kroz praksu, ponavljanje i uživanje u procesu."
-            data-tr="Bir dilin adım adım, pratik yaparak, tekrar ederek ve bu süreçten keyif alarak öğrenildiğine inanıyorum."
+            data-tr="Bir dilin adım adım, pratik yaparak, tekrar ederek ve sürecin tadını çıkararak öğrenildiğine inanıyorum."
         >
             Verujem da se jezik uči korak po korak,
             kroz praksu, ponavljanje i uživanje
@@ -583,32 +535,23 @@
         </p>
 
 
-        <p
-            class="signature"
-            data-sr="Hajde da turski naučimo — sa stilom. ♡"
-            data-tr="Haydi Türkçeyi birlikte öğrenelim — zarafetle. ♡"
-        >
+        <p class="signature">
             Hajde da turski naučimo —
             sa stilom. ♡
         </p>
 
-
     </div>
-
 
 </section>
 
 
-
-<!-- =====================================
+<!-- =====================================================
      METOD
-====================================== -->
+===================================================== -->
 
 <section id="metod" class="method-section">
 
-
     <div class="method-header">
-
 
         <div
             class="section-kicker"
@@ -630,16 +573,12 @@
         </h2>
 
 
-        <div
-            class="gold-line"
-            style="margin:25px auto;"
-        ></div>
+        <div class="gold-line center-line"></div>
 
 
         <p
             data-sr="Bez zatrpavanja informacijama. Bez učenja napamet bez razloga. Fokus je na tome da turski stvarno počneš da koristiš."
-            data-tr="Bilgi bombardımanı olmadan. Gereksiz ezber yapmadan. Odak noktamız Türkçeyi gerçekten kullanmaya başlaman."
-            style="color:rgba(255,255,255,.6);line-height:1.8;font-size:13px;"
+            data-tr="Gereksiz bilgi kalabalığı yok. Sebepsiz ezber yok. Odak noktamız Türkçeyi gerçekten kullanmaya başlaman."
         >
             Bez zatrpavanja informacijama.
             Bez učenja napamet bez razloga.
@@ -650,15 +589,11 @@
     </div>
 
 
-
     <div class="method-grid">
-
 
         <div class="method-card">
 
-            <div class="method-number">
-                01
-            </div>
+            <div class="method-number">01</div>
 
             <h3
                 data-sr="Razumi"
@@ -669,7 +604,7 @@
 
             <p
                 data-sr="Upoznaj strukturu jezika i shvati kako turski zapravo funkcioniše."
-                data-tr="Dilin yapısını tanı ve Türkçenin nasıl çalıştığını gerçekten anla."
+                data-tr="Dilin yapısını keşfet ve Türkçenin nasıl çalıştığını anla."
             >
                 Upoznaj strukturu jezika
                 i shvati kako turski
@@ -679,12 +614,9 @@
         </div>
 
 
-
         <div class="method-card">
 
-            <div class="method-number">
-                02
-            </div>
+            <div class="method-number">02</div>
 
             <h3
                 data-sr="Vežbaj"
@@ -705,12 +637,9 @@
         </div>
 
 
-
         <div class="method-card">
 
-            <div class="method-number">
-                03
-            </div>
+            <div class="method-number">03</div>
 
             <h3
                 data-sr="Govori"
@@ -721,7 +650,7 @@
 
             <p
                 data-sr="Kroz praktične situacije počni da sklapaš svoje rečenice."
-                data-tr="Pratik durumlar sayesinde kendi cümlelerini kurmaya başla."
+                data-tr="Pratik durumlar üzerinden kendi cümlelerini kurmaya başla."
             >
                 Kroz praktične situacije
                 počni da sklapaš
@@ -731,12 +660,9 @@
         </div>
 
 
-
         <div class="method-card">
 
-            <div class="method-number">
-                04
-            </div>
+            <div class="method-number">04</div>
 
             <h3
                 data-sr="Zavoli"
@@ -756,20 +682,65 @@
 
         </div>
 
-
     </div>
-
 
 </section>
 
 
+<!-- =====================================================
+     PREMIUM CTA
+===================================================== -->
 
-<!-- =====================================
+<section class="premium-cta">
+
+    <div class="premium-cta-overlay"></div>
+
+    <div class="premium-cta-content">
+
+        <div
+            class="section-kicker"
+            data-sr="TVOJ PRVI KORAK"
+            data-tr="İLK ADIMIN"
+        >
+            TVOJ PRVI KORAK
+        </div>
+
+
+        <h2
+            data-sr="Turski počinje ovde."
+            data-tr="Türkçe burada başlıyor."
+        >
+            Turski počinje ovde.
+        </h2>
+
+
+        <p
+            data-sr="Jasno. Praktično. Sa stilom."
+            data-tr="Anlaşılır. Pratik. Tarzıyla."
+        >
+            Jasno. Praktično. Sa stilom.
+        </p>
+
+
+        <a
+            href="#kontakt"
+            class="button button-primary"
+            data-sr="Kontaktiraj Mariju"
+            data-tr="Marija ile İletişime Geç"
+        >
+            Kontaktiraj Mariju
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
      CONTACT
-====================================== -->
+===================================================== -->
 
 <section id="kontakt" class="contact-section">
-
 
     <div
         class="section-kicker"
@@ -783,18 +754,18 @@
     <h2
         class="section-title"
         data-sr="Spreman za prvi korak?"
-        data-tr="İlk adımı atmaya hazır mısın?"
+        data-tr="İlk adıma hazır mısın?"
     >
         Spreman za prvi korak?
     </h2>
 
 
-    <div class="gold-line"></div>
+    <div class="gold-line center-line"></div>
 
 
     <p
         data-sr="Učimo turski zajedno — jasno, praktično i sa stilom."
-        data-tr="Türkçeyi birlikte öğrenelim — anlaşılır, pratik ve zarafetle."
+        data-tr="Türkçeyi birlikte öğrenelim — anlaşılır, pratik ve tarzıyla."
     >
         Učimo turski zajedno —
         jasno, praktično i sa stilom.
@@ -810,20 +781,16 @@
         Kontaktiraj Mariju
     </a>
 
-
 </section>
-
 
 </main>
 
 
-
-<!-- =====================================
+<!-- =====================================================
      FOOTER
-====================================== -->
+===================================================== -->
 
 <footer>
-
 
     <div class="footer-logo">
 
@@ -841,53 +808,44 @@
     <p
         class="footer-description"
         data-sr="Kurs turskog jezika by Marija"
-        data-tr="Marija tarafından Türkçe dil kursu"
+        data-tr="Marija ile Türkçe dil kursu"
     >
         Kurs turskog jezika by Marija
     </p>
 
 
+    <div class="footer-socials">
+
+        <a
+            href="https://www.facebook.com/marija.djokic.33"
+            target="_blank"
+            rel="noopener"
+        >
+            Facebook
+        </a>
+
+        <a
+            href="https://www.instagram.com/maka_djordjevic13/?hl=en"
+            target="_blank"
+            rel="noopener"
+        >
+            Instagram
+        </a>
+
+    </div>
+
+
     <div class="footer-links">
 
-        <a
-            href="#pocetna"
-            data-sr="Početna"
-            data-tr="Ana Sayfa"
-        >
-            Početna
-        </a>
+        <a href="#pocetna">Početna</a>
 
-        <a
-            href="#kurs"
-            data-sr="Kurs"
-            data-tr="Kurs"
-        >
-            Kurs
-        </a>
+        <a href="#kurs">Kurs</a>
 
-        <a
-            href="#marija"
-            data-sr="O Mariji"
-            data-tr="Marija Hakkında"
-        >
-            O Mariji
-        </a>
+        <a href="#marija">O Mariji</a>
 
-        <a
-            href="#metod"
-            data-sr="Kako učimo"
-            data-tr="Nasıl Öğreniyoruz"
-        >
-            Kako učimo
-        </a>
+        <a href="#metod">Kako učimo</a>
 
-        <a
-            href="#kontakt"
-            data-sr="Kontakt"
-            data-tr="İletişim"
-        >
-            Kontakt
-        </a>
+        <a href="#kontakt">Kontakt</a>
 
     </div>
 
@@ -896,79 +854,53 @@
         © 2026 Turski sa stilom. Sva prava zadržana.
     </div>
 
-
 </footer>
 
 
-
-<!-- =====================================
+<!-- =====================================================
      LANGUAGE SCRIPT
-====================================== -->
+===================================================== -->
 
 <script>
 
-const languageButtons = document.querySelectorAll(".language-btn");
+function setLanguage(lang) {
 
-const translatableElements =
-    document.querySelectorAll("[data-sr][data-tr]");
+    const elements = document.querySelectorAll('[data-sr][data-tr]');
 
+    elements.forEach(element => {
 
-function setLanguage(language) {
-
-    document.documentElement.lang =
-        language === "tr" ? "tr" : "sr";
-
-
-    translatableElements.forEach(element => {
-
-        const translation =
-            language === "tr"
-                ? element.getAttribute("data-tr")
-                : element.getAttribute("data-sr");
-
-        if (translation) {
-            element.textContent = translation;
-        }
-
-    });
-
-
-    languageButtons.forEach(button => {
-
-        button.classList.toggle(
-            "active",
-            button.dataset.lang === language
+        element.textContent = element.getAttribute(
+            lang === 'tr' ? 'data-tr' : 'data-sr'
         );
 
     });
 
 
-    localStorage.setItem(
-        "selectedLanguage",
-        language
-    );
+    document.documentElement.lang = lang === 'tr'
+        ? 'tr'
+        : 'sr';
+
+
+    document.getElementById('srBtn')
+        .classList.toggle('active', lang === 'sr');
+
+    document.getElementById('trBtn')
+        .classList.toggle('active', lang === 'tr');
+
+
+    localStorage.setItem('siteLanguage', lang);
 
 }
 
 
-languageButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        setLanguage(button.dataset.lang);
-
-    });
-
-});
-
+/* UČITAJ PRETHODNI JEZIK */
 
 const savedLanguage =
-    localStorage.getItem("selectedLanguage") || "sr";
+    localStorage.getItem('siteLanguage') || 'sr';
 
 setLanguage(savedLanguage);
 
 </script>
-
 
 </body>
 </html>
