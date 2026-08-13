@@ -393,50 +393,13 @@ a {
 
 .logo-emblem {
 
-    width: 112px;
+    width: 90px;
 
-    height: 73px;
+    height: 90px;
 
     margin-top: 2px;
 
     overflow: visible;
-
-    filter:
-        drop-shadow(0 3px 5px rgba(0,0,0,.35));
-}
-
-
-.logo-emblem .gold {
-
-    fill: none;
-
-    stroke: var(--gold-light);
-
-    stroke-width: 2;
-
-    stroke-linecap: round;
-
-    stroke-linejoin: round;
-}
-
-
-.logo-emblem .solid {
-
-    fill: var(--gold-light);
-
-    stroke: none;
-}
-
-
-.logo-emblem .thin {
-
-    fill: none;
-
-    stroke: var(--gold-light);
-
-    stroke-width: 1;
-
-    opacity: .9;
 }
 
 
@@ -1400,9 +1363,9 @@ footer {
 
     .logo-emblem {
 
-        width: 100px;
+        width: 80px;
 
-        height: 65px;
+        height: 80px;
     }
 
 
@@ -1830,7 +1793,42 @@ footer {
     ================================== -->
 
     <a href="#pocetna" class="logo">
-        <img src="putanja-do-tvoje-slike.png" alt="Turski sa stilom logo" style="height: 100%; max-height: 80px; width: auto; object-fit: contain;">
+
+        <svg class="logo-emblem" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Turski sa stilom logo">
+            <defs>
+                <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ebd197" />
+                    <stop offset="25%" stop-color="#b48645" />
+                    <stop offset="50%" stop-color="#fdf1a9" />
+                    <stop offset="75%" stop-color="#b48645" />
+                    <stop offset="100%" stop-color="#ebd197" />
+                </linearGradient>
+                <filter id="shadow">
+                    <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#000" flood-opacity="0.5"/>
+                </filter>
+            </defs>
+            <g filter="url(#shadow)">
+                <!-- Ring -->
+                <path d="M 85,25 A 45,45 0 1,1 15,35" fill="none" stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" />
+                <!-- T Crossbar -->
+                <path d="M 5,35 Q 40,20 90,25" fill="none" stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" />
+                <!-- T Stem -->
+                <path d="M 45,25 C 40,60 30,85 15,75 C 5,68 15,60 25,65" fill="none" stroke="url(#goldGradient)" stroke-width="5" stroke-linecap="round" />
+                <!-- M letter -->
+                <path d="M 35,60 C 45,40 55,40 60,60 C 60,75 55,85 60,95" fill="none" stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" />
+                <path d="M 55,60 C 65,40 75,40 80,60 C 80,75 75,85 80,95" fill="none" stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" />
+                <path d="M 75,60 C 85,40 95,40 100,60 C 100,75 105,85 115,80" fill="none" stroke="url(#goldGradient)" stroke-width="4.5" stroke-linecap="round" />
+            </g>
+        </svg>
+
+        <div class="logo-main">
+            TURSKI
+        </div>
+
+        <div class="logo-sub">
+            SA STILOM
+        </div>
+
     </a>
 
 
