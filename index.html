@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Turski sa stilom | Kurs turskog jezika by Marija</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Turski sa stilom | Kurs turskog jezika by Marija
+    </title>
 
     <meta
         name="description"
@@ -12,895 +17,2388 @@
     >
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Parisienne&display=swap"
         rel="stylesheet"
     >
 
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* =========================================
+           GLOBAL
+        ========================================= */
+
+        :root {
+
+            --black: #080808;
+
+            --black-soft: #111111;
+
+            --cream: #f5eee4;
+
+            --cream-dark: #e8dccb;
+
+            --burgundy: #71191b;
+
+            --burgundy-dark: #4b0f11;
+
+            --gold: #b99a61;
+
+            --gold-light: #d6bc87;
+
+            --white: #ffffff;
+
+            --text: #25211e;
+
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            background: var(--cream);
+
+            color: var(--text);
+
+            font-family: 'Montserrat', sans-serif;
+
+            overflow-x: hidden;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================================
+           TOP BAR
+        ========================================= */
+
+        .topbar {
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            height: 36px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            background: rgba(0,0,0,0.78);
+
+            color: white;
+
+            z-index: 50;
+
+            font-size: 11px;
+
+            letter-spacing: .5px;
+
+            border-bottom: 1px solid rgba(255,255,255,.12);
+        }
+
+
+        .topbar-left,
+        .topbar-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+        }
+
+
+        .topbar a {
+
+            opacity: .85;
+
+            transition: .3s;
+        }
+
+
+        .topbar a:hover {
+
+            color: var(--gold-light);
+
+            opacity: 1;
+        }
+
+
+        .socials {
+
+            display: flex;
+
+            gap: 7px;
+        }
+
+
+        .social {
+
+            width: 22px;
+            height: 22px;
+
+            border: 1px solid rgba(255,255,255,.3);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 9px;
+
+            transition: .3s;
+        }
+
+
+        .social:hover {
+
+            background: var(--gold);
+
+            border-color: var(--gold);
+        }
+
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        .navbar {
+
+            position: absolute;
+
+            top: 36px;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 86px;
+
+            background: rgba(0,0,0,.88);
+
+            z-index: 40;
+
+            display: grid;
+
+            grid-template-columns: 1fr 190px 1fr;
+
+            align-items: center;
+
+            padding: 0 5%;
+
+            color: white;
+
+            border-bottom: 1px solid rgba(255,255,255,.1);
+        }
+
+
+        .nav-left,
+        .nav-right {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 38px;
+        }
+
+
+        .nav-right {
+
+            justify-content: flex-end;
+        }
+
+
+        .nav-link {
+
+            position: relative;
+
+            font-size: 11px;
+
+            font-weight: 500;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            opacity: .9;
+
+            transition: .3s;
+        }
+
+
+        .nav-link::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: -10px;
+
+            width: 0;
+
+            height: 1px;
+
+            background: var(--gold-light);
+
+            transition: .3s;
+        }
+
+
+        .nav-link:hover {
+
+            color: var(--gold-light);
+        }
+
+
+        .nav-link:hover::after {
+
+            width: 100%;
+        }
+
+
+
+        /* =========================================
+           LOGO
+        ========================================= */
+
+        .logo {
+
+            position: relative;
+
+            height: 75px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .logo-icon {
+
+            position: relative;
+
+            width: 45px;
+
+            height: 35px;
+
+            margin-bottom: 3px;
+
+            color: var(--gold-light);
+        }
+
+
+        .logo-icon .dome {
+
+            position: absolute;
+
+            left: 12px;
+
+            bottom: 6px;
+
+            width: 22px;
+
+            height: 17px;
+
+            border: 1px solid var(--gold-light);
+
+            border-radius: 50% 50% 0 0;
+        }
+
+
+        .logo-icon .minaret-left,
+        .logo-icon .minaret-right {
+
+            position: absolute;
+
+            bottom: 4px;
+
+            width: 1px;
+
+            height: 28px;
+
+            background: var(--gold-light);
+        }
+
+
+        .logo-icon .minaret-left {
+
+            left: 7px;
+        }
+
+
+        .logo-icon .minaret-right {
+
+            right: 7px;
+        }
+
+
+        .logo-icon .tip-left,
+        .logo-icon .tip-right {
+
+            position: absolute;
+
+            width: 4px;
+
+            height: 4px;
+
+            border-radius: 50%;
+
+            background: var(--gold-light);
+        }
+
+
+        .logo-icon .tip-left {
+
+            left: 5.5px;
+
+            top: 1px;
+        }
+
+
+        .logo-icon .tip-right {
+
+            right: 5.5px;
+
+            top: 1px;
+        }
+
+
+        .logo-main {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 22px;
+
+            line-height: .8;
+
+            letter-spacing: 3px;
+
+            font-weight: 600;
+        }
+
+
+        .logo-sub {
+
+            font-size: 7px;
+
+            letter-spacing: 4px;
+
+            margin-top: 8px;
+
+            color: var(--gold-light);
+        }
+
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            position: relative;
+
+            min-height: 100vh;
+
+            height: 900px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(0,0,0,.43),
+                    rgba(0,0,0,.66)
+                ),
+
+                url("https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=2200&q=90");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                radial-gradient(
+                    circle at center,
+                    rgba(0,0,0,.05),
+                    rgba(0,0,0,.45)
+                );
+
+            pointer-events: none;
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 5;
+
+            max-width: 1050px;
+
+            padding: 170px 25px 80px;
+        }
+
+
+        .hero-kicker {
+
+            font-size: 12px;
+
+            letter-spacing: 6px;
+
+            text-transform: uppercase;
+
+            color: var(--gold-light);
+
+            margin-bottom: 25px;
+
+            font-weight: 500;
+        }
+
+
+        .hero h1 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-weight: 500;
+
+            font-size: clamp(70px, 10vw, 145px);
+
+            line-height: .75;
+
+            letter-spacing: -4px;
+
+            text-transform: uppercase;
+
+            text-shadow: 0 8px 30px rgba(0,0,0,.4);
+        }
+
+
+        .hero h1 span {
+
+            display: block;
+
+            font-family: 'Montserrat', sans-serif;
+
+            font-size: clamp(27px, 4vw, 55px);
+
+            font-weight: 300;
+
+            letter-spacing: 13px;
+
+            margin-top: 30px;
+
+            color: white;
+        }
+
+
+        .hero-author {
+
+            font-family: 'Parisienne', cursive;
+
+            font-size: 38px;
+
+            color: var(--gold-light);
+
+            margin-top: 30px;
+        }
+
+
+        .hero-divider {
+
+            width: 170px;
+
+            height: 1px;
+
+            background: var(--gold-light);
+
+            margin: 25px auto;
+        }
+
+
+        .hero-description {
+
+            max-width: 620px;
+
+            margin: auto;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 25px;
+
+            line-height: 1.35;
+
+            text-shadow: 0 3px 15px rgba(0,0,0,.6);
+        }
+
+
+        .hero-description strong {
+
+            display: block;
+
+            font-family: 'Parisienne', cursive;
+
+            font-size: 32px;
+
+            font-weight: 400;
+
+            color: var(--gold-light);
+
+            margin-top: 5px;
+        }
+
+
+        .hero-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            margin-top: 38px;
+        }
+
+
+        .button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-width: 190px;
+
+            padding: 17px 27px;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            transition: .35s;
+        }
+
+
+        .button-primary {
+
+            background: var(--burgundy);
+
+            color: white;
+
+            border: 1px solid var(--burgundy);
+        }
+
+
+        .button-primary:hover {
+
+            background: var(--burgundy-dark);
+
+            transform: translateY(-3px);
+        }
+
+
+        .button-outline {
+
+            border: 1px solid rgba(255,255,255,.7);
+
+            color: white;
+
+            background: rgba(0,0,0,.15);
+
+            backdrop-filter: blur(5px);
+        }
+
+
+        .button-outline:hover {
+
+            background: white;
+
+            color: #111;
+
+            transform: translateY(-3px);
+        }
+
+
+        .hero-scroll {
+
+            position: absolute;
+
+            bottom: 30px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            opacity: .8;
+        }
+
+
+        .scroll-line {
+
+            width: 1px;
+
+            height: 45px;
+
+            background: var(--gold-light);
+        }
+
+
+
+        /* =========================================
+           QUICK INFO BAR
+        ========================================= */
+
+        .info-bar {
+
+            position: relative;
+
+            z-index: 10;
+
+            background: var(--burgundy);
+
+            color: white;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            padding: 0 5%;
+        }
+
+
+        .info-item {
+
+            min-height: 120px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            border-right: 1px solid rgba(255,255,255,.18);
+
+            text-align: left;
+        }
+
+
+        .info-item:last-child {
+
+            border-right: none;
+        }
+
+
+        .info-icon {
+
+            color: var(--gold-light);
+
+            font-size: 27px;
+
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+
+        .info-text strong {
+
+            display: block;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 21px;
+
+            font-weight: 500;
+        }
+
+
+        .info-text span {
+
+            display: block;
+
+            font-size: 10px;
+
+            opacity: .75;
+
+            margin-top: 4px;
+        }
+
+
+
+        /* =========================================
+           SECTION COMMON
+        ========================================= */
+
+        .section {
+
+            padding: 140px 8%;
+
+            max-width: 1450px;
+
+            margin: auto;
+        }
+
+
+        .section-kicker {
+
+            color: var(--gold);
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        .section-title {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(52px, 6vw, 85px);
+
+            font-weight: 500;
+
+            line-height: .9;
+
+            color: var(--burgundy);
+        }
+
+
+        .gold-line {
+
+            width: 130px;
+
+            height: 1px;
+
+            background: var(--gold);
+
+            margin: 25px 0;
+        }
+
+
+
+        /* =========================================
+           ABOUT COURSE
+        ========================================= */
+
+        .course-section {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 100px;
+
+            align-items: center;
+        }
+
+
+        .course-text {
+
+            font-size: 15px;
+
+            line-height: 2;
+
+            color: #5d5650;
+        }
+
+
+        .course-text p {
+
+            margin-bottom: 22px;
+        }
+
+
+        .course-text strong {
+
+            color: var(--burgundy);
+        }
+
+
+        .course-highlight {
+
+            margin-top: 35px;
+
+            padding: 28px;
+
+            border-left: 2px solid var(--gold);
+
+            background: rgba(255,255,255,.35);
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 23px;
+
+            line-height: 1.35;
+
+            color: var(--burgundy);
+        }
+
+
+
+        /* =========================================
+           MARIJA
+        ========================================= */
+
+        .marija-section {
+
+            background: #e9ddce;
+
+            max-width: none;
+
+            padding: 140px 10%;
+
+            display: grid;
+
+            grid-template-columns: 45% 55%;
+
+            align-items: center;
+        }
+
+
+        .marija-photo-wrap {
+
+            display: flex;
+
+            justify-content: center;
+        }
+
+
+        .marija-photo {
+
+            width: 390px;
+
+            height: 510px;
+
+            background:
+
+                linear-gradient(
+                    rgba(113,25,27,.12),
+                    rgba(113,25,27,.12)
+                ),
+
+                url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=90");
+
+            background-size: cover;
+
+            background-position: center;
+
+            border: 12px solid var(--cream);
+
+            box-shadow:
+
+                0 25px 70px rgba(0,0,0,.2);
+
+            transform: rotate(-2deg);
+
+            position: relative;
+        }
+
+
+        .marija-photo::after {
+
+            content: "Marija";
+
+            position: absolute;
+
+            right: -55px;
+
+            bottom: 30px;
+
+            font-family: 'Parisienne', cursive;
+
+            color: var(--burgundy);
+
+            font-size: 37px;
+
+            transform: rotate(-8deg);
+        }
+
+
+        .marija-content {
+
+            max-width: 620px;
+        }
+
+
+        .marija-content h2 {
+
+            font-family: 'Parisienne', cursive;
+
+            font-weight: 400;
+
+            color: var(--burgundy);
+
+            font-size: 78px;
+
+            line-height: .9;
+        }
+
+
+        .marija-content p {
+
+            font-size: 14px;
+
+            line-height: 1.9;
+
+            color: #5b554f;
+
+            margin-bottom: 20px;
+        }
+
+
+        .signature {
+
+            font-family: 'Parisienne', cursive;
+
+            font-size: 28px !important;
+
+            color: var(--burgundy) !important;
+
+            margin-top: 25px;
+        }
+
+
+
+        /* =========================================
+           METHOD
+        ========================================= */
+
+        .method-section {
+
+            background: var(--black);
+
+            color: white;
+
+            max-width: none;
+
+            padding: 130px 8%;
+        }
+
+
+        .method-header {
+
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: auto auto 70px;
+        }
+
+
+        .method-header .section-kicker {
+
+            color: var(--gold-light);
+        }
+
+
+        .method-header .section-title {
+
+            color: white;
+        }
+
+
+        .method-grid {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+
+        .method-card {
+
+            padding: 45px 30px;
+
+            text-align: center;
+
+            border-right: 1px solid rgba(255,255,255,.15);
+        }
+
+
+        .method-card:last-child {
+
+            border-right: none;
+        }
+
+
+        .method-number {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 48px;
+
+            color: var(--gold-light);
+
+            margin-bottom: 15px;
+        }
+
+
+        .method-card h3 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 25px;
+
+            font-weight: 500;
+
+            margin-bottom: 13px;
+        }
+
+
+        .method-card p {
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+            color: rgba(255,255,255,.62);
+        }
+
+
+
+        /* =========================================
+           ISTANBUL QUOTE
+        ========================================= */
+
+        .istanbul-section {
+
+            min-height: 600px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(0,0,0,.45),
+                    rgba(0,0,0,.62)
+                ),
+
+                url("https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=2200&q=90");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            padding: 100px 25px;
+        }
+
+
+        .istanbul-content {
+
+            max-width: 850px;
+        }
+
+
+        .istanbul-content .small {
+
+            font-size: 10px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            color: var(--gold-light);
+        }
+
+
+        .istanbul-content h2 {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-weight: 500;
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            line-height: .85;
+
+            margin: 25px 0;
+        }
+
+
+        .istanbul-content p {
+
+            font-family: 'Parisienne', cursive;
+
+            font-size: 32px;
+
+            color: var(--gold-light);
+        }
+
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact-section {
+
+            text-align: center;
+
+            padding: 150px 25px;
+        }
+
+
+        .contact-section .gold-line {
+
+            margin: 25px auto;
+        }
+
+
+        .contact-section p:not(.section-kicker) {
+
+            max-width: 600px;
+
+            margin: 0 auto 35px;
+
+            color: #625a53;
+
+            line-height: 1.8;
+        }
+
+
+        .contact-section .button {
+
+            margin: auto;
+        }
+
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            background: #050505;
+
+            color: white;
+
+            padding: 70px 5% 30px;
+
+            text-align: center;
+        }
+
+
+        .footer-logo {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            margin-bottom: 20px;
+        }
+
+
+        .footer-logo-main {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 30px;
+
+            letter-spacing: 4px;
+        }
+
+
+        .footer-logo-sub {
+
+            font-size: 8px;
+
+            letter-spacing: 5px;
+
+            color: var(--gold-light);
+
+            margin-top: 7px;
+        }
+
+
+        .footer-description {
+
+            color: rgba(255,255,255,.55);
+
+            font-size: 11px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .footer-links {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 35px;
+
+            margin-bottom: 45px;
+        }
+
+
+        .footer-links a {
+
+            font-size: 10px;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+            color: rgba(255,255,255,.75);
+
+            transition: .3s;
+        }
+
+
+        .footer-links a:hover {
+
+            color: var(--gold-light);
+        }
+
+
+        .copyright {
+
+            border-top: 1px solid rgba(255,255,255,.12);
+
+            padding-top: 25px;
+
+            color: rgba(255,255,255,.35);
+
+            font-size: 9px;
+
+            letter-spacing: 1px;
+        }
+
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .topbar {
+
+                justify-content: center;
+
+                font-size: 9px;
+            }
+
+
+            .topbar-right {
+
+                display: none;
+            }
+
+
+            .navbar {
+
+                grid-template-columns: 1fr;
+
+                height: 95px;
+
+                top: 36px;
+
+                justify-items: center;
+            }
+
+
+            .nav-left,
+            .nav-right {
+
+                display: none;
+            }
+
+
+            .logo {
+
+                height: 90px;
+            }
+
+
+            .hero {
+
+                height: 820px;
+
+                min-height: 820px;
+
+                background-attachment: scroll;
+            }
+
+
+            .hero-content {
+
+                padding-top: 150px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 76px;
+
+                letter-spacing: -2px;
+            }
+
+
+            .hero h1 span {
+
+                font-size: 27px;
+
+                letter-spacing: 6px;
+            }
+
+
+            .hero-buttons {
+
+                flex-direction: column;
+
+                max-width: 280px;
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
+
+
+            .info-bar {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .info-item {
+
+                min-height: 100px;
+
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+
+            .info-item:nth-child(2) {
+
+                border-right: none;
+            }
+
+
+            .course-section,
+            .marija-section {
+
+                grid-template-columns: 1fr;
+
+                gap: 60px;
+            }
+
+
+            .method-grid {
+
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .method-card:nth-child(2) {
+
+                border-right: none;
+            }
+
+
+            .method-card:nth-child(1),
+            .method-card:nth-child(2) {
+
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+        }
+
+
+
+        @media (max-width: 600px) {
+
+            .topbar-left {
+
+                font-size: 8px;
+            }
+
+
+            .hero {
+
+                height: 760px;
+
+                min-height: 760px;
+            }
+
+
+            .hero-kicker {
+
+                font-size: 9px;
+
+                letter-spacing: 4px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 64px;
+            }
+
+
+            .hero h1 span {
+
+                font-size: 23px;
+
+                letter-spacing: 4px;
+
+                margin-top: 22px;
+            }
+
+
+            .hero-author {
+
+                font-size: 30px;
+            }
+
+
+            .hero-description {
+
+                font-size: 21px;
+            }
+
+
+            .hero-description strong {
+
+                font-size: 27px;
+            }
+
+
+            .info-bar {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .info-item {
+
+                border-right: none;
+
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+
+            .section {
+
+                padding: 90px 25px;
+            }
+
+
+            .section-title {
+
+                font-size: 55px;
+            }
+
+
+            .marija-section {
+
+                padding: 90px 25px;
+            }
+
+
+            .marija-photo {
+
+                width: 280px;
+
+                height: 390px;
+            }
+
+
+            .marija-photo::after {
+
+                right: -25px;
+
+                font-size: 30px;
+            }
+
+
+            .marija-content h2 {
+
+                font-size: 62px;
+            }
+
+
+            .method-section {
+
+                padding: 90px 20px;
+            }
+
+
+            .method-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .method-card {
+
+                border-right: none !important;
+
+                border-bottom: 1px solid rgba(255,255,255,.15);
+            }
+
+
+            .method-card:last-child {
+
+                border-bottom: none;
+            }
+
+
+            .istanbul-section {
+
+                min-height: 500px;
+
+                background-attachment: scroll;
+            }
+
+
+            .istanbul-content h2 {
+
+                font-size: 65px;
+            }
+
+
+            .footer-links {
+
+                flex-direction: column;
+
+                gap: 18px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<!-- =====================================================
-     TOP BAR
-===================================================== -->
 
-<div class="topbar">
+    <!-- =====================================
+         TOP BAR
+    ====================================== -->
 
-    <div class="topbar-left">
-        <span>Turski sa stilom</span>
-        <span class="top-separator">|</span>
-        <span>Kurs turskog jezika</span>
-    </div>
+    <div class="topbar">
 
-    <div class="topbar-right">
-
-        <a href="#kontakt">Prijava</a>
-
-        <span>|</span>
-
-        <a href="#kontakt">Kontakt</a>
-
-        <!-- JEZIK -->
-        <div class="language-switcher">
-
-            <button
-                class="language-btn active"
-                id="srBtn"
-                onclick="setLanguage('sr')"
-            >
-                <span class="flag flag-serbia"></span>
-                <span>RS</span>
-            </button>
-
-            <button
-                class="language-btn"
-                id="trBtn"
-                onclick="setLanguage('tr')"
-            >
-                <span class="flag flag-turkey"></span>
-                <span>TR</span>
-            </button>
-
-        </div>
-
-        <!-- SOCIAL -->
-        <div class="socials">
-
-            <a
-                href="https://www.facebook.com/marija.djokic.33"
-                class="social"
-                target="_blank"
-                rel="noopener"
-                aria-label="Facebook"
-            >
-                f
-            </a>
-
-            <a
-                href="https://www.instagram.com/maka_djordjevic13/?hl=en"
-                class="social"
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram"
-            >
-                ◎
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
-
-<header class="navbar">
-
-    <nav class="nav-left">
-
-        <a href="#pocetna" class="nav-link" data-sr="Početna" data-tr="Početna">
-            Početna
-        </a>
-
-        <a href="#kurs" class="nav-link" data-sr="Kurs" data-tr="Kurs">
-            Kurs
-        </a>
-
-        <a href="#marija" class="nav-link" data-sr="O Mariji" data-tr="Marija Hakkında">
-            O Mariji
-        </a>
-
-    </nav>
-
-
-    <!-- LOGO — OSTAVLJEN CSS LOGO -->
-
-    <a href="#pocetna" class="logo">
-
-        <div class="logo-icon">
-
-            <div class="dome"></div>
-
-            <div class="minaret-left"></div>
-
-            <div class="minaret-right"></div>
-
-            <div class="tip-left"></div>
-
-            <div class="tip-right"></div>
-
-        </div>
-
-        <div class="logo-main">
-            TURSKI
-        </div>
-
-        <div class="logo-sub">
-            SA STILOM
-        </div>
-
-    </a>
-
-
-    <nav class="nav-right">
-
-        <a
-            href="#metod"
-            class="nav-link"
-            data-sr="Kako učimo"
-            data-tr="Nasıl Öğreniyoruz"
-        >
-            Kako učimo
-        </a>
-
-        <a
-            href="#kontakt"
-            class="nav-link"
-            data-sr="Kontakt"
-            data-tr="İletişim"
-        >
-            Kontakt
-        </a>
-
-    </nav>
-
-</header>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<main>
-
-<section id="pocetna" class="hero">
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-
-        <div
-            class="hero-kicker"
-            data-sr="KURS TURSKOG JEZIKA"
-            data-tr="TÜRKÇE DİL KURSU"
-        >
-            KURS TURSKOG JEZIKA
-        </div>
-
-
-        <h1>
-
-            TURSKI
+        <div class="topbar-left">
 
             <span>
+                Turski sa stilom
+            </span>
+
+            <span>
+                |
+            </span>
+
+            <span>
+                Kurs turskog jezika
+            </span>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <a href="#kontakt">
+                Prijava
+            </a>
+
+            <span>|</span>
+
+            <a href="#kontakt">
+                Kontakt
+            </a>
+
+            <div class="socials">
+
+                <a href="#" class="social">
+                    f
+                </a>
+
+                <a href="#" class="social">
+                    ◎
+                </a>
+
+                <a href="#" class="social">
+                    ▶
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <header class="navbar">
+
+
+        <nav class="nav-left">
+
+            <a href="#pocetna" class="nav-link">
+                Početna
+            </a>
+
+            <a href="#kurs" class="nav-link">
+                Kurs
+            </a>
+
+            <a href="#marija" class="nav-link">
+                O Mariji
+            </a>
+
+        </nav>
+
+
+
+        <!-- LOGO -->
+
+        <a href="#pocetna" class="logo">
+
+            <div class="logo-icon">
+
+                <div class="dome"></div>
+
+                <div class="minaret-left"></div>
+
+                <div class="minaret-right"></div>
+
+                <div class="tip-left"></div>
+
+                <div class="tip-right"></div>
+
+            </div>
+
+            <div class="logo-main">
+                TURSKI
+            </div>
+
+            <div class="logo-sub">
                 SA STILOM
-            </span>
+            </div>
 
-        </h1>
-
-
-        <div
-            class="hero-author"
-            data-sr="by Marija"
-            data-tr="by Marija"
-        >
-            by Marija
-        </div>
+        </a>
 
 
-        <div class="hero-divider"></div>
+
+        <nav class="nav-right">
+
+            <a href="#metod" class="nav-link">
+                Kako učimo
+            </a>
+
+            <a href="#istanbul" class="nav-link">
+                Istanbul
+            </a>
+
+            <a href="#kontakt" class="nav-link">
+                Kontakt
+            </a>
+
+        </nav>
+
+    </header>
 
 
-        <div class="hero-description">
 
-            <span
-                data-sr="Nauči turski. Razumi ga."
-                data-tr="Türkçe öğren. Onu anla."
-            >
-                Nauči turski. Razumi ga.
-            </span>
+    <!-- =====================================
+         HERO
+    ====================================== -->
 
-            <strong
-                data-sr="Govori ga sa stilom."
-                data-tr="Tarzınla konuş."
-            >
-                Govori ga sa stilom.
-            </strong>
-
-        </div>
+    <main>
 
 
-        <div class="hero-buttons">
+        <section id="pocetna" class="hero">
+
+
+            <div class="hero-content">
+
+
+                <div class="hero-kicker">
+                    KURS TURSKOG JEZIKA
+                </div>
+
+
+                <h1>
+
+                    TURSKI
+
+                    <span>
+                        SA STILOM
+                    </span>
+
+                </h1>
+
+
+                <div class="hero-author">
+                    by Marija
+                </div>
+
+
+                <div class="hero-divider"></div>
+
+
+                <div class="hero-description">
+
+                    Nauči turski.
+                    Razumi ga.
+                    <strong>
+                        Govori ga sa stilom.
+                    </strong>
+
+                </div>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#kurs"
+                        class="button button-primary"
+                    >
+                        Započni kurs
+                    </a>
+
+
+                    <a
+                        href="#marija"
+                        class="button button-outline"
+                    >
+                        Upoznaj Mariju
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-scroll">
+
+                <span>
+                    Discover
+                </span>
+
+                <div class="scroll-line"></div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             INFO BAR
+        ====================================== -->
+
+        <section class="info-bar">
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    ♡
+                </div>
+
+                <div class="info-text">
+
+                    <strong>
+                        Komunikacija
+                    </strong>
+
+                    <span>
+                        Govoriš kroz stvarne situacije
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    ✦
+                </div>
+
+                <div class="info-text">
+
+                    <strong>
+                        Praktično
+                    </strong>
+
+                    <span>
+                        Učiš ono što zaista koristiš
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    ✎
+                </div>
+
+                <div class="info-text">
+
+                    <strong>
+                        Jasno
+                    </strong>
+
+                    <span>
+                        Bez komplikovane gramatike
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="info-item">
+
+                <div class="info-icon">
+                    ♡
+                </div>
+
+                <div class="info-text">
+
+                    <strong>
+                        Sa stilom
+                    </strong>
+
+                    <span>
+                        Prirodni izrazi i turske nijanse
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             KURS
+        ====================================== -->
+
+        <section id="kurs" class="section course-section">
+
+
+            <div>
+
+                <div class="section-kicker">
+                    ZAŠTO TURSKI?
+                </div>
+
+
+                <h2 class="section-title">
+
+                    Ne uči turski
+                    samo da bi ga znao.
+
+                </h2>
+
+
+                <div class="gold-line"></div>
+
+            </div>
+
+
+
+            <div class="course-text">
+
+                <p>
+                    Uči ga da bi mogao da ga koristiš.
+                </p>
+
+
+                <p>
+                    Da naručiš kafu u Istanbulu bez razmišljanja.
+                    Da razumeš ljude oko sebe.
+                    Da vodiš razgovor.
+                    Da razumeš izraze koje Turci zaista koriste.
+                </p>
+
+
+                <p>
+                    Turski nije samo skup pravila.
+                    To je jezik koji treba da čuješ,
+                    razumeš i počneš da koristiš.
+                </p>
+
+
+                <div class="course-highlight">
+
+                    „Cilj nije da samo znaš turski.
+                    Cilj je da se na turskom
+                    osećaš prirodno.“
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             MARIJA
+        ====================================== -->
+
+        <section id="marija" class="marija-section">
+
+
+            <div class="marija-photo-wrap">
+
+                <div class="marija-photo"></div>
+
+            </div>
+
+
+
+            <div class="marija-content">
+
+
+                <div class="section-kicker">
+                    ĆAO, JA SAM
+                </div>
+
+
+                <h2>
+                    Marija.
+                </h2>
+
+
+                <div class="gold-line"></div>
+
+
+                <p>
+                    Diplomirani turkolog i zaljubljenik
+                    u turski jezik.
+                </p>
+
+
+                <p>
+                    Turski je deo mog obrazovanja,
+                    ali još više — deo mog svakodnevnog
+                    života i komunikacije.
+                </p>
+
+
+                <p>
+                    Ovaj kurs nije nastao da bi te
+                    zatrpao pravilima, već da bi ti
+                    pomogao/la da razumeš jezik i koristiš
+                    ga prirodno i samouvereno.
+                </p>
+
+
+                <p>
+                    Verujem da se jezik uči korak po korak,
+                    kroz praksu, ponavljanje i uživanje
+                    u procesu.
+                </p>
+
+
+                <p class="signature">
+                    Hajde da turski naučimo —
+                    sa stilom. ♡
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             METOD
+        ====================================== -->
+
+        <section id="metod" class="method-section">
+
+
+            <div class="method-header">
+
+
+                <div class="section-kicker">
+                    KAKO UČIMO?
+                </div>
+
+
+                <h2 class="section-title">
+                    Jednostavno.
+                    Praktično.
+                    Prirodno.
+                </h2>
+
+
+                <div
+                    class="gold-line"
+                    style="margin:25px auto;"
+                ></div>
+
+
+                <p style="color:rgba(255,255,255,.6);line-height:1.8;font-size:13px;">
+                    Bez zatrpavanja informacijama.
+                    Bez učenja napamet bez razloga.
+                    Fokus je na tome da turski
+                    stvarno počneš da koristiš.
+                </p>
+
+            </div>
+
+
+
+            <div class="method-grid">
+
+
+                <div class="method-card">
+
+                    <div class="method-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Razumi
+                    </h3>
+
+                    <p>
+                        Upoznaj strukturu jezika
+                        i shvati kako turski
+                        zapravo funkcioniše.
+                    </p>
+
+                </div>
+
+
+
+                <div class="method-card">
+
+                    <div class="method-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Vežbaj
+                    </h3>
+
+                    <p>
+                        Nauči fraze i izraze
+                        koje možeš odmah
+                        da koristiš.
+                    </p>
+
+                </div>
+
+
+
+                <div class="method-card">
+
+                    <div class="method-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Govori
+                    </h3>
+
+                    <p>
+                        Kroz praktične situacije
+                        počni da sklapaš
+                        svoje rečenice.
+                    </p>
+
+                </div>
+
+
+
+                <div class="method-card">
+
+                    <div class="method-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Zavoli
+                    </h3>
+
+                    <p>
+                        Kada razumeš jezik,
+                        počinješ da uživaš
+                        u njemu.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             ISTANBUL
+        ====================================== -->
+
+        <section id="istanbul" class="istanbul-section">
+
+
+            <div class="istanbul-content">
+
+
+                <div class="small">
+                    BIR DIL, BIR DÜNYA
+                </div>
+
+
+                <h2>
+                    İstanbul
+                </h2>
+
+
+                <p>
+                    Jezik je najlepši kada
+                    postane deo tvog života.
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             CONTACT
+        ====================================== -->
+
+        <section id="kontakt" class="contact-section">
+
+
+            <div class="section-kicker">
+                MERHABA
+            </div>
+
+
+            <h2 class="section-title">
+                Spreman za prvi korak?
+            </h2>
+
+
+            <div class="gold-line"></div>
+
+
+            <p>
+                Učimo turski zajedno —
+                jasno, praktično i sa stilom.
+            </p>
+
 
             <a
-                href="#kurs"
+                href="mailto:kontakt@turksisastilom.rs"
                 class="button button-primary"
-                data-sr="Započni kurs"
-                data-tr="Kursa Başla"
             >
-                Započni kurs
+                Kontaktiraj Mariju
             </a>
 
 
-            <a
-                href="#marija"
-                class="button button-outline"
-                data-sr="Upoznaj Mariju"
-                data-tr="Marija'yı Tanı"
-            >
-                Upoznaj Mariju
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+
+            <div class="footer-logo-main">
+                TURSKI
+            </div>
+
+            <div class="footer-logo-sub">
+                SA STILOM
+            </div>
+
+        </div>
+
+
+        <p class="footer-description">
+            Kurs turskog jezika by Marija
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#pocetna">
+                Početna
+            </a>
+
+            <a href="#kurs">
+                Kurs
+            </a>
+
+            <a href="#marija">
+                O Mariji
+            </a>
+
+            <a href="#metod">
+                Kako učimo
+            </a>
+
+            <a href="#istanbul">
+                Istanbul
+            </a>
+
+            <a href="#kontakt">
+                Kontakt
             </a>
 
         </div>
 
-    </div>
 
-
-    <!-- PREMIUM SCROLL INDICATOR -->
-    <div class="hero-scroll">
-
-        <span></span>
-
-        <div class="scroll-line"></div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PREMIUM INFO BAR
-===================================================== -->
-
-<section class="info-bar">
-
-    <div class="info-item">
-
-        <div class="info-icon">♡</div>
-
-        <div class="info-text">
-
-            <strong
-                data-sr="Komunikacija"
-                data-tr="İletişim"
-            >
-                Komunikacija
-            </strong>
-
-            <span
-                data-sr="Govoriš kroz stvarne situacije"
-                data-tr="Gerçek hayat üzerinden konuş"
-            >
-                Govoriš kroz stvarne situacije
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="info-item">
-
-        <div class="info-icon">✦</div>
-
-        <div class="info-text">
-
-            <strong
-                data-sr="Praktično"
-                data-tr="Pratik"
-            >
-                Praktično
-            </strong>
-
-            <span
-                data-sr="Učiš ono što zaista koristiš"
-                data-tr="Gerçekten kullanacağın şeyleri öğren"
-            >
-                Učiš ono što zaista koristiš
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="info-item">
-
-        <div class="info-icon">✎</div>
-
-        <div class="info-text">
-
-            <strong
-                data-sr="Jasno"
-                data-tr="Anlaşılır"
-            >
-                Jasno
-            </strong>
-
-            <span
-                data-sr="Bez komplikovane gramatike"
-                data-tr="Karmaşık gramer olmadan"
-            >
-                Bez komplikovane gramatike
-            </span>
-
-        </div>
-
-    </div>
-
-
-    <div class="info-item">
-
-        <div class="info-icon">♡</div>
-
-        <div class="info-text">
-
-            <strong
-                data-sr="Sa stilom"
-                data-tr="Tarzıyla"
-            >
-                Sa stilom
-            </strong>
-
-            <span
-                data-sr="Prirodni izrazi i turske nijanse"
-                data-tr="Doğal ifadeler ve Türkçe incelikleri"
-            >
-                Prirodni izrazi i turske nijanse
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     KURS
-===================================================== -->
-
-<section id="kurs" class="section course-section">
-
-    <div class="course-heading">
-
-        <div
-            class="section-kicker"
-            data-sr="ZAŠTO TURSKI?"
-            data-tr="NEDEN TÜRKÇE?"
-        >
-            ZAŠTO TURSKI?
+        <div class="copyright">
+            © 2026 Turski sa stilom. Sva prava zadržana.
         </div>
 
 
-        <h2
-            class="section-title"
-            data-sr="Ne uči turski samo da bi ga znao."
-            data-tr="Türkçeyi sadece bilmek için öğrenme."
-        >
-            Ne uči turski samo da bi ga znao.
-        </h2>
+    </footer>
 
-
-        <div class="gold-line"></div>
-
-    </div>
-
-
-    <div class="course-text">
-
-        <p
-            data-sr="Uči ga da bi mogao da ga koristiš."
-            data-tr="Türkçeyi kullanabilmek için öğren."
-        >
-            Uči ga da bi mogao da ga koristiš.
-        </p>
-
-
-        <p
-            data-sr="Da naručiš kafu u Istanbulu bez razmišljanja. Da razumeš ljude oko sebe. Da vodiš razgovor. Da razumeš izraze koje Turci zaista koriste."
-            data-tr="İstanbul'da kahveni düşünmeden sipariş edebilmek, çevrendeki insanları anlayabilmek ve gerçek bir sohbet kurabilmek için."
-        >
-            Da naručiš kafu u Istanbulu bez razmišljanja.
-            Da razumeš ljude oko sebe.
-            Da vodiš razgovor.
-            Da razumeš izraze koje Turci zaista koriste.
-        </p>
-
-
-        <p
-            data-sr="Turski nije samo skup pravila. To je jezik koji treba da čuješ, razumeš i počneš da koristiš."
-            data-tr="Türkçe sadece kurallardan ibaret değildir. Onu duymalı, anlamalı ve kullanmaya başlamalısın."
-        >
-            Turski nije samo skup pravila.
-            To je jezik koji treba da čuješ,
-            razumeš i počneš da koristiš.
-        </p>
-
-
-        <div class="course-highlight">
-
-            <span
-                data-sr="„Cilj nije da samo znaš turski. Cilj je da se na turskom osećaš prirodno.“"
-                data-tr="“Amaç sadece Türkçe bilmek değil. Türkçe konuşurken kendini doğal hissetmek.”"
-            >
-                „Cilj nije da samo znaš turski.
-                Cilj je da se na turskom
-                osećaš prirodno.“
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     MARija
-===================================================== -->
-
-<section id="marija" class="marija-section">
-
-    <div class="marija-photo-wrap">
-
-        <div class="marija-photo"></div>
-
-    </div>
-
-
-    <div class="marija-content">
-
-        <div
-            class="section-kicker"
-            data-sr="ĆAO, JA SAM"
-            data-tr="MERHABA, BEN"
-        >
-            ĆAO, JA SAM
-        </div>
-
-
-        <h2>
-            Marija.
-        </h2>
-
-
-        <div class="gold-line"></div>
-
-
-        <p
-            data-sr="Diplomirani turkolog i zaljubljenik u turski jezik."
-            data-tr="Türkoloji mezunu ve Türkçe tutkunu."
-        >
-            Diplomirani turkolog i zaljubljenik
-            u turski jezik.
-        </p>
-
-
-        <p
-            data-sr="Turski je deo mog obrazovanja, ali još više — deo mog svakodnevnog života i komunikacije."
-            data-tr="Türkçe eğitimimin bir parçası, ama daha da önemlisi günlük hayatımın ve iletişimimin bir parçası."
-        >
-            Turski je deo mog obrazovanja,
-            ali još više — deo mog svakodnevnog
-            života i komunikacije.
-        </p>
-
-
-        <p
-            data-sr="Ovaj kurs nije nastao da bi te zatrpao pravilima, već da bi ti pomogao/la da razumeš jezik i koristiš ga prirodno i samouvereno."
-            data-tr="Bu kurs seni kurallara boğmak için değil, dili anlamana ve doğal, özgüvenli bir şekilde kullanmana yardımcı olmak için hazırlandı."
-        >
-            Ovaj kurs nije nastao da bi te
-            zatrpao pravilima, već da bi ti
-            pomogao/la da razumeš jezik i koristiš
-            ga prirodno i samouvereno.
-        </p>
-
-
-        <p
-            data-sr="Verujem da se jezik uči korak po korak, kroz praksu, ponavljanje i uživanje u procesu."
-            data-tr="Bir dilin adım adım, pratik yaparak, tekrar ederek ve sürecin tadını çıkararak öğrenildiğine inanıyorum."
-        >
-            Verujem da se jezik uči korak po korak,
-            kroz praksu, ponavljanje i uživanje
-            u procesu.
-        </p>
-
-
-        <p class="signature">
-            Hajde da turski naučimo —
-            sa stilom. ♡
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     METOD
-===================================================== -->
-
-<section id="metod" class="method-section">
-
-    <div class="method-header">
-
-        <div
-            class="section-kicker"
-            data-sr="KAKO UČIMO?"
-            data-tr="NASIL ÖĞRENİYORUZ?"
-        >
-            KAKO UČIMO?
-        </div>
-
-
-        <h2
-            class="section-title"
-            data-sr="Jednostavno. Praktično. Prirodno."
-            data-tr="Basit. Pratik. Doğal."
-        >
-            Jednostavno.
-            Praktično.
-            Prirodno.
-        </h2>
-
-
-        <div class="gold-line center-line"></div>
-
-
-        <p
-            data-sr="Bez zatrpavanja informacijama. Bez učenja napamet bez razloga. Fokus je na tome da turski stvarno počneš da koristiš."
-            data-tr="Gereksiz bilgi kalabalığı yok. Sebepsiz ezber yok. Odak noktamız Türkçeyi gerçekten kullanmaya başlaman."
-        >
-            Bez zatrpavanja informacijama.
-            Bez učenja napamet bez razloga.
-            Fokus je na tome da turski
-            stvarno počneš da koristiš.
-        </p>
-
-    </div>
-
-
-    <div class="method-grid">
-
-        <div class="method-card">
-
-            <div class="method-number">01</div>
-
-            <h3
-                data-sr="Razumi"
-                data-tr="Anla"
-            >
-                Razumi
-            </h3>
-
-            <p
-                data-sr="Upoznaj strukturu jezika i shvati kako turski zapravo funkcioniše."
-                data-tr="Dilin yapısını keşfet ve Türkçenin nasıl çalıştığını anla."
-            >
-                Upoznaj strukturu jezika
-                i shvati kako turski
-                zapravo funkcioniše.
-            </p>
-
-        </div>
-
-
-        <div class="method-card">
-
-            <div class="method-number">02</div>
-
-            <h3
-                data-sr="Vežbaj"
-                data-tr="Pratik Yap"
-            >
-                Vežbaj
-            </h3>
-
-            <p
-                data-sr="Nauči fraze i izraze koje možeš odmah da koristiš."
-                data-tr="Hemen kullanabileceğin ifadeleri ve kalıpları öğren."
-            >
-                Nauči fraze i izraze
-                koje možeš odmah
-                da koristiš.
-            </p>
-
-        </div>
-
-
-        <div class="method-card">
-
-            <div class="method-number">03</div>
-
-            <h3
-                data-sr="Govori"
-                data-tr="Konuş"
-            >
-                Govori
-            </h3>
-
-            <p
-                data-sr="Kroz praktične situacije počni da sklapaš svoje rečenice."
-                data-tr="Pratik durumlar üzerinden kendi cümlelerini kurmaya başla."
-            >
-                Kroz praktične situacije
-                počni da sklapaš
-                svoje rečenice.
-            </p>
-
-        </div>
-
-
-        <div class="method-card">
-
-            <div class="method-number">04</div>
-
-            <h3
-                data-sr="Zavoli"
-                data-tr="Sev"
-            >
-                Zavoli
-            </h3>
-
-            <p
-                data-sr="Kada razumeš jezik, počinješ da uživaš u njemu."
-                data-tr="Dili anladığında, ondan keyif almaya başlarsın."
-            >
-                Kada razumeš jezik,
-                počinješ da uživaš
-                u njemu.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PREMIUM CTA
-===================================================== -->
-
-<section class="premium-cta">
-
-    <div class="premium-cta-overlay"></div>
-
-    <div class="premium-cta-content">
-
-        <div
-            class="section-kicker"
-            data-sr="TVOJ PRVI KORAK"
-            data-tr="İLK ADIMIN"
-        >
-            TVOJ PRVI KORAK
-        </div>
-
-
-        <h2
-            data-sr="Turski počinje ovde."
-            data-tr="Türkçe burada başlıyor."
-        >
-            Turski počinje ovde.
-        </h2>
-
-
-        <p
-            data-sr="Jasno. Praktično. Sa stilom."
-            data-tr="Anlaşılır. Pratik. Tarzıyla."
-        >
-            Jasno. Praktično. Sa stilom.
-        </p>
-
-
-        <a
-            href="#kontakt"
-            class="button button-primary"
-            data-sr="Kontaktiraj Mariju"
-            data-tr="Marija ile İletişime Geç"
-        >
-            Kontaktiraj Mariju
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CONTACT
-===================================================== -->
-
-<section id="kontakt" class="contact-section">
-
-    <div
-        class="section-kicker"
-        data-sr="MERHABA"
-        data-tr="MERHABA"
-    >
-        MERHABA
-    </div>
-
-
-    <h2
-        class="section-title"
-        data-sr="Spreman za prvi korak?"
-        data-tr="İlk adıma hazır mısın?"
-    >
-        Spreman za prvi korak?
-    </h2>
-
-
-    <div class="gold-line center-line"></div>
-
-
-    <p
-        data-sr="Učimo turski zajedno — jasno, praktično i sa stilom."
-        data-tr="Türkçeyi birlikte öğrenelim — anlaşılır, pratik ve tarzıyla."
-    >
-        Učimo turski zajedno —
-        jasno, praktično i sa stilom.
-    </p>
-
-
-    <a
-        href="mailto:kontakt@turksisastilom.rs"
-        class="button button-primary"
-        data-sr="Kontaktiraj Mariju"
-        data-tr="Marija ile İletişime Geç"
-    >
-        Kontaktiraj Mariju
-    </a>
-
-</section>
-
-</main>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <div class="footer-logo">
-
-        <div class="footer-logo-main">
-            TURSKI
-        </div>
-
-        <div class="footer-logo-sub">
-            SA STILOM
-        </div>
-
-    </div>
-
-
-    <p
-        class="footer-description"
-        data-sr="Kurs turskog jezika by Marija"
-        data-tr="Marija ile Türkçe dil kursu"
-    >
-        Kurs turskog jezika by Marija
-    </p>
-
-
-    <div class="footer-socials">
-
-        <a
-            href="https://www.facebook.com/marija.djokic.33"
-            target="_blank"
-            rel="noopener"
-        >
-            Facebook
-        </a>
-
-        <a
-            href="https://www.instagram.com/maka_djordjevic13/?hl=en"
-            target="_blank"
-            rel="noopener"
-        >
-            Instagram
-        </a>
-
-    </div>
-
-
-    <div class="footer-links">
-
-        <a href="#pocetna">Početna</a>
-
-        <a href="#kurs">Kurs</a>
-
-        <a href="#marija">O Mariji</a>
-
-        <a href="#metod">Kako učimo</a>
-
-        <a href="#kontakt">Kontakt</a>
-
-    </div>
-
-
-    <div class="copyright">
-        © 2026 Turski sa stilom. Sva prava zadržana.
-    </div>
-
-</footer>
-
-
-<!-- =====================================================
-     LANGUAGE SCRIPT
-===================================================== -->
-
-<script>
-
-function setLanguage(lang) {
-
-    const elements = document.querySelectorAll('[data-sr][data-tr]');
-
-    elements.forEach(element => {
-
-        element.textContent = element.getAttribute(
-            lang === 'tr' ? 'data-tr' : 'data-sr'
-        );
-
-    });
-
-
-    document.documentElement.lang = lang === 'tr'
-        ? 'tr'
-        : 'sr';
-
-
-    document.getElementById('srBtn')
-        .classList.toggle('active', lang === 'sr');
-
-    document.getElementById('trBtn')
-        .classList.toggle('active', lang === 'tr');
-
-
-    localStorage.setItem('siteLanguage', lang);
-
-}
-
-
-/* UČITAJ PRETHODNI JEZIK */
-
-const savedLanguage =
-    localStorage.getItem('siteLanguage') || 'sr';
-
-setLanguage(savedLanguage);
-
-</script>
 
 </body>
 </html>
