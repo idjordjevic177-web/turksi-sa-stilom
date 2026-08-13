@@ -15,11 +15,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Parisienne&display=swap"
@@ -27,10 +25,6 @@
     >
 
     <style>
-
-        /* =====================================================
-           GLOBAL
-        ===================================================== */
 
         :root {
             --black: #080808;
@@ -68,16 +62,16 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            TOP BAR
-        ===================================================== */
+        ========================= */
 
         .topbar {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 38px;
+            height: 36px;
 
             display: flex;
             align-items: center;
@@ -85,11 +79,10 @@
 
             padding: 0 5%;
 
-            background: rgba(0,0,0,0.80);
-
+            background: rgba(0,0,0,0.78);
             color: white;
 
-            z-index: 100;
+            z-index: 50;
 
             font-size: 11px;
             letter-spacing: .5px;
@@ -115,29 +108,80 @@
         }
 
 
-        /* =====================================================
+        /* =========================
+           LANGUAGE SWITCH
+        ========================= */
+
+        .language-switch {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .language-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 5px;
+
+            min-width: 48px;
+            height: 25px;
+
+            padding: 0 7px;
+
+            border: 1px solid rgba(255,255,255,.25);
+            background: rgba(255,255,255,.04);
+
+            color: white;
+
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: .3s;
+        }
+
+        .language-btn:hover {
+            border-color: var(--gold-light);
+            color: var(--gold-light);
+        }
+
+        .language-btn.active {
+            background: var(--gold);
+            border-color: var(--gold);
+            color: #111;
+        }
+
+        .flag {
+            font-size: 15px;
+            line-height: 1;
+        }
+
+
+        /* =========================
            SOCIALS
-        ===================================================== */
+        ========================= */
 
         .socials {
             display: flex;
-            align-items: center;
             gap: 7px;
         }
 
         .social {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
 
-            border: 1px solid rgba(255,255,255,.35);
+            border: 1px solid rgba(255,255,255,.3);
             border-radius: 50%;
 
-            display: flex !important;
+            display: flex;
             align-items: center;
             justify-content: center;
 
-            font-size: 10px;
-            font-weight: 600;
+            font-size: 9px;
 
             transition: .3s;
         }
@@ -149,89 +193,24 @@
         }
 
 
-        /* =====================================================
-           LANGUAGE SWITCHER
-        ===================================================== */
-
-        .language-switcher {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .language-button {
-            display: flex !important;
-            align-items: center;
-            justify-content: center;
-
-            gap: 6px;
-
-            height: 30px;
-            min-width: 67px;
-
-            padding: 0 8px;
-
-            border: 1px solid rgba(255,255,255,.25);
-            background: rgba(255,255,255,.04);
-
-            color: white;
-
-            cursor: pointer;
-
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px;
-            font-weight: 600;
-
-            letter-spacing: .5px;
-
-            transition: .3s;
-        }
-
-        .language-button:hover {
-            border-color: var(--gold-light);
-            color: var(--gold-light);
-        }
-
-        .language-button.active {
-            background: var(--gold);
-            border-color: var(--gold);
-            color: #111;
-        }
-
-        .flag {
-            width: 21px;
-            height: 14px;
-
-            object-fit: cover;
-
-            display: inline-block !important;
-
-            border-radius: 1px;
-
-            box-shadow: 0 0 2px rgba(0,0,0,.5);
-        }
-
-
-        /* =====================================================
+        /* =========================
            NAVIGATION
-        ===================================================== */
+        ========================= */
 
         .navbar {
             position: absolute;
-
-            top: 38px;
+            top: 36px;
             left: 0;
 
             width: 100%;
-            height: 90px;
+            height: 86px;
 
-            background: rgba(0,0,0,.86);
+            background: rgba(0,0,0,.88);
 
-            z-index: 90;
+            z-index: 40;
 
             display: grid;
-
-            grid-template-columns: 1fr 210px 1fr;
+            grid-template-columns: 1fr 190px 1fr;
 
             align-items: center;
 
@@ -239,7 +218,7 @@
 
             color: white;
 
-            border-bottom: 1px solid rgba(255,255,255,.10);
+            border-bottom: 1px solid rgba(255,255,255,.1);
         }
 
         .nav-left,
@@ -257,12 +236,12 @@
             position: relative;
 
             font-size: 11px;
-            font-weight: 600;
+            font-weight: 500;
 
             letter-spacing: 1px;
             text-transform: uppercase;
 
-            opacity: .92;
+            opacity: .9;
 
             transition: .3s;
         }
@@ -292,45 +271,116 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            LOGO
-        ===================================================== */
+        ========================= */
 
         .logo {
-            height: 88px;
+            position: relative;
+
+            height: 75px;
 
             display: flex;
+            flex-direction: column;
+
             align-items: center;
             justify-content: center;
 
+            color: white;
+
+            text-align: center;
+        }
+
+        .logo-icon {
             position: relative;
 
-            z-index: 10;
+            width: 45px;
+            height: 35px;
+
+            margin-bottom: 3px;
+
+            color: var(--gold-light);
         }
 
-        .logo img {
-            width: 150px;
-            height: auto;
+        .logo-icon .dome {
+            position: absolute;
 
-            max-height: 82px;
+            left: 12px;
+            bottom: 6px;
 
-            object-fit: contain;
+            width: 22px;
+            height: 17px;
 
-            display: block;
-
-            filter: drop-shadow(0 5px 12px rgba(0,0,0,.45));
-
-            transition: .3s;
+            border: 1px solid var(--gold-light);
+            border-radius: 50% 50% 0 0;
         }
 
-        .logo:hover img {
-            transform: scale(1.03);
+        .logo-icon .minaret-left,
+        .logo-icon .minaret-right {
+            position: absolute;
+
+            bottom: 4px;
+
+            width: 1px;
+            height: 28px;
+
+            background: var(--gold-light);
+        }
+
+        .logo-icon .minaret-left {
+            left: 7px;
+        }
+
+        .logo-icon .minaret-right {
+            right: 7px;
+        }
+
+        .logo-icon .tip-left,
+        .logo-icon .tip-right {
+            position: absolute;
+
+            width: 4px;
+            height: 4px;
+
+            border-radius: 50%;
+
+            background: var(--gold-light);
+        }
+
+        .logo-icon .tip-left {
+            left: 5.5px;
+            top: 1px;
+        }
+
+        .logo-icon .tip-right {
+            right: 5.5px;
+            top: 1px;
+        }
+
+        .logo-main {
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 22px;
+            line-height: .8;
+
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        .logo-sub {
+            font-size: 7px;
+
+            letter-spacing: 4px;
+
+            margin-top: 8px;
+
+            color: var(--gold-light);
         }
 
 
-        /* =====================================================
+        /* =========================
            HERO
-        ===================================================== */
+        ========================= */
 
         .hero {
             position: relative;
@@ -339,6 +389,7 @@
             height: 900px;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -347,18 +398,14 @@
             color: white;
 
             background-image:
-
                 linear-gradient(
                     rgba(0,0,0,.43),
                     rgba(0,0,0,.66)
                 ),
-
                 url("https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=2200&q=90");
 
             background-size: cover;
-
             background-position: center;
-
             background-attachment: fixed;
         }
 
@@ -380,7 +427,6 @@
 
         .hero-content {
             position: relative;
-
             z-index: 5;
 
             max-width: 1050px;
@@ -544,10 +590,42 @@
             transform: translateY(-3px);
         }
 
+        .hero-scroll {
+            position: absolute;
 
-        /* =====================================================
-           QUICK INFO BAR
-        ===================================================== */
+            bottom: 30px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            gap: 8px;
+
+            font-size: 9px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            opacity: .8;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 45px;
+
+            background: var(--gold-light);
+        }
+
+
+        /* =========================
+           INFO BAR
+        ========================= */
 
         .info-bar {
             position: relative;
@@ -613,9 +691,9 @@
         }
 
 
-        /* =====================================================
-           SECTION COMMON
-        ===================================================== */
+        /* =========================
+           COMMON
+        ========================= */
 
         .section {
             padding: 140px 8%;
@@ -662,9 +740,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            COURSE
-        ===================================================== */
+        ========================= */
 
         .course-section {
             display: grid;
@@ -711,9 +789,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            MARIJA
-        ===================================================== */
+        ========================= */
 
         .marija-section {
             background: #e9ddce;
@@ -731,20 +809,20 @@
 
         .marija-photo-wrap {
             display: flex;
+
             justify-content: center;
         }
 
         .marija-photo {
             width: 390px;
+
             height: 510px;
 
             background:
-
                 linear-gradient(
                     rgba(113,25,27,.12),
                     rgba(113,25,27,.12)
                 ),
-
                 url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=90");
 
             background-size: cover;
@@ -767,7 +845,6 @@
             position: absolute;
 
             right: -55px;
-
             bottom: 30px;
 
             font-family: 'Parisienne', cursive;
@@ -816,9 +893,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            METHOD
-        ===================================================== */
+        ========================= */
 
         .method-section {
             background: var(--black);
@@ -897,9 +974,76 @@
         }
 
 
-        /* =====================================================
+        /* =========================
+           ISTANBUL
+        ========================= */
+
+        .istanbul-section {
+            min-height: 600px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            color: white;
+
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,.45),
+                    rgba(0,0,0,.62)
+                ),
+                url("https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?auto=format&fit=crop&w=2200&q=90");
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+
+            padding: 100px 25px;
+        }
+
+        .istanbul-content {
+            max-width: 850px;
+        }
+
+        .istanbul-content .small {
+            font-size: 10px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            color: var(--gold-light);
+        }
+
+        .istanbul-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+
+            font-weight: 500;
+
+            font-size: clamp(55px, 8vw, 100px);
+
+            line-height: .85;
+
+            margin: 25px 0;
+        }
+
+        .istanbul-content p {
+            font-family: 'Parisienne', cursive;
+
+            font-size: 32px;
+
+            color: var(--gold-light);
+        }
+
+
+        /* =========================
            CONTACT
-        ===================================================== */
+        ========================= */
 
         .contact-section {
             text-align: center;
@@ -926,9 +1070,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            FOOTER
-        ===================================================== */
+        ========================= */
 
         footer {
             background: #050505;
@@ -1002,6 +1146,42 @@
             color: var(--gold-light);
         }
 
+        .footer-socials {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            margin-bottom: 35px;
+        }
+
+        .footer-social {
+            width: 35px;
+            height: 35px;
+
+            border: 1px solid rgba(255,255,255,.2);
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 12px;
+
+            transition: .3s;
+        }
+
+        .footer-social:hover {
+            background: var(--gold);
+
+            border-color: var(--gold);
+
+            color: #111;
+        }
+
         .copyright {
             border-top: 1px solid rgba(255,255,255,.12);
 
@@ -1015,9 +1195,9 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            MOBILE
-        ===================================================== */
+        ========================= */
 
         @media (max-width: 900px) {
 
@@ -1025,8 +1205,6 @@
                 justify-content: center;
 
                 font-size: 9px;
-
-                padding: 0 12px;
             }
 
             .topbar-left {
@@ -1037,37 +1215,12 @@
                 gap: 10px;
             }
 
-            .topbar-right > span {
-                display: none;
-            }
-
-            .language-switcher {
-                gap: 3px;
-            }
-
-            .language-button {
-                min-width: 60px;
-                height: 27px;
-                font-size: 8px;
-            }
-
-            .flag {
-                width: 19px;
-                height: 13px;
-            }
-
-            .social {
-                width: 22px;
-                height: 22px;
-            }
-
-
             .navbar {
                 grid-template-columns: 1fr;
 
                 height: 95px;
 
-                top: 38px;
+                top: 36px;
 
                 justify-items: center;
             }
@@ -1080,12 +1233,6 @@
             .logo {
                 height: 90px;
             }
-
-            .logo img {
-                width: 135px;
-                max-height: 82px;
-            }
-
 
             .hero {
                 height: 820px;
@@ -1117,10 +1264,8 @@
                 max-width: 280px;
 
                 margin-left: auto;
-
                 margin-right: auto;
             }
-
 
             .info-bar {
                 grid-template-columns: 1fr 1fr;
@@ -1136,14 +1281,12 @@
                 border-right: none;
             }
 
-
             .course-section,
             .marija-section {
                 grid-template-columns: 1fr;
 
                 gap: 60px;
             }
-
 
             .method-grid {
                 grid-template-columns: 1fr 1fr;
@@ -1157,32 +1300,24 @@
             .method-card:nth-child(2) {
                 border-bottom: 1px solid rgba(255,255,255,.15);
             }
+
         }
 
 
         @media (max-width: 600px) {
 
-            .topbar {
-                height: 36px;
+            .topbar-left {
+                font-size: 8px;
             }
 
-            .topbar-right {
-                gap: 7px;
+            .language-btn {
+                min-width: 43px;
+                padding: 0 5px;
             }
 
-            .topbar-right > a {
-                font-size: 9px;
+            .language-btn span:last-child {
+                display: none;
             }
-
-            .language-button {
-                min-width: 57px;
-            }
-
-
-            .navbar {
-                top: 36px;
-            }
-
 
             .hero {
                 height: 760px;
@@ -1220,7 +1355,6 @@
                 font-size: 27px;
             }
 
-
             .info-bar {
                 grid-template-columns: 1fr;
             }
@@ -1231,7 +1365,6 @@
                 border-bottom: 1px solid rgba(255,255,255,.15);
             }
 
-
             .section {
                 padding: 90px 25px;
             }
@@ -1239,7 +1372,6 @@
             .section-title {
                 font-size: 55px;
             }
-
 
             .marija-section {
                 padding: 90px 25px;
@@ -1261,7 +1393,6 @@
                 font-size: 62px;
             }
 
-
             .method-section {
                 padding: 90px 20px;
             }
@@ -1280,12 +1411,22 @@
                 border-bottom: none;
             }
 
+            .istanbul-section {
+                min-height: 500px;
+
+                background-attachment: scroll;
+            }
+
+            .istanbul-content h2 {
+                font-size: 65px;
+            }
 
             .footer-links {
                 flex-direction: column;
 
                 gap: 18px;
             }
+
         }
 
     </style>
@@ -1296,24 +1437,23 @@
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================
          TOP BAR
-    ===================================================== -->
+    ========================= -->
 
     <div class="topbar">
 
         <div class="topbar-left">
 
-            <span data-sr="Turski sa stilom" data-tr="Türkçe Şıklıkla">
+            <span data-sr="Turski sa stilom"
+                  data-tr="Türkçe Şıklığı">
                 Turski sa stilom
             </span>
 
             <span>|</span>
 
-            <span
-                data-sr="Kurs turskog jezika"
-                data-tr="Türkçe Dil Kursu"
-            >
+            <span data-sr="Kurs turskog jezika"
+                  data-tr="Türkçe Dil Kursu">
                 Kurs turskog jezika
             </span>
 
@@ -1322,44 +1462,41 @@
 
         <div class="topbar-right">
 
-            <a
-                href="#kontakt"
-                data-sr="Prijava"
-                data-tr="Başvuru"
-            >
+            <a href="#kontakt"
+               data-sr="Prijava"
+               data-tr="Kayıt">
                 Prijava
             </a>
 
             <span>|</span>
 
-            <a
-                href="#kontakt"
-                data-sr="Kontakt"
-                data-tr="İletişim"
-            >
+            <a href="#kontakt"
+               data-sr="Kontakt"
+               data-tr="İletişim">
                 Kontakt
             </a>
 
 
             <!-- JEZICI -->
 
-            <div class="language-switcher">
+            <div class="language-switch">
 
                 <button
-                    type="button"
-                    class="language-button active"
-                    data-lang="sr"
+                    class="language-btn active"
+                    id="srBtn"
                     onclick="setLanguage('sr')"
+                    title="Srpski"
                 >
                     <span class="flag">🇷🇸</span>
                     <span>SR</span>
                 </button>
 
+
                 <button
-                    type="button"
-                    class="language-button"
-                    data-lang="tr"
+                    class="language-btn"
+                    id="trBtn"
                     onclick="setLanguage('tr')"
+                    title="Türkçe"
                 >
                     <span class="flag">🇹🇷</span>
                     <span>TR</span>
@@ -1368,7 +1505,7 @@
             </div>
 
 
-            <!-- DRUŠTVENE MREŽE -->
+            <!-- DRUSTVENE MREZE -->
 
             <div class="socials">
 
@@ -1377,7 +1514,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="social"
-                    aria-label="Facebook"
+                    title="Facebook"
                 >
                     f
                 </a>
@@ -1387,7 +1524,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="social"
-                    aria-label="Instagram"
+                    title="Instagram"
                 >
                     ◎
                 </a>
@@ -1400,76 +1537,81 @@
 
 
 
-    <!-- =====================================================
+    <!-- =========================
          NAVIGATION
-    ===================================================== -->
+    ========================= -->
 
     <header class="navbar">
 
 
         <nav class="nav-left">
 
-            <a
-                href="#pocetna"
-                class="nav-link"
-                data-sr="Početna"
-                data-tr="Ana Sayfa"
-            >
+            <a href="#pocetna"
+               class="nav-link"
+               data-sr="Početna"
+               data-tr="Ana Sayfa">
                 Početna
             </a>
 
-            <a
-                href="#kurs"
-                class="nav-link"
-                data-sr="Kurs"
-                data-tr="Kurs"
-            >
+            <a href="#kurs"
+               class="nav-link"
+               data-sr="Kurs"
+               data-tr="Kurs">
                 Kurs
             </a>
 
-            <a
-                href="#marija"
-                class="nav-link"
-                data-sr="O Mariji"
-                data-tr="Marija Hakkında"
-            >
+            <a href="#marija"
+               class="nav-link"
+               data-sr="O Mariji"
+               data-tr="Marija Hakkında">
                 O Mariji
             </a>
 
         </nav>
 
 
-
-        <!-- NOVI LOGO -->
+        <!-- LOGO -->
 
         <a href="#pocetna" class="logo">
 
-            <img
-                src="logo.png"
-                alt="Turski sa stilom - Marija"
-            >
+            <div class="logo-icon">
+
+                <div class="dome"></div>
+
+                <div class="minaret-left"></div>
+
+                <div class="minaret-right"></div>
+
+                <div class="tip-left"></div>
+
+                <div class="tip-right"></div>
+
+            </div>
+
+            <div class="logo-main">
+                TURSKI
+            </div>
+
+            <div class="logo-sub">
+                SA STILOM
+            </div>
 
         </a>
 
 
-
         <nav class="nav-right">
 
-            <a
-                href="#metod"
-                class="nav-link"
-                data-sr="Kako učimo"
-                data-tr="Nasıl Öğreniyoruz"
-            >
+            <a href="#metod"
+               class="nav-link"
+               data-sr="Kako učimo"
+               data-tr="Nasıl Öğreniyoruz">
                 Kako učimo
             </a>
 
-            <a
-                href="#kontakt"
-                class="nav-link"
-                data-sr="Kontakt"
-                data-tr="İletişim"
-            >
+            <a href="#kontakt"
+               class="nav-link"
+               data-sr="Kontakt"
+               data-tr="İletişim">
                 Kontakt
             </a>
 
@@ -1479,60 +1621,35 @@
 
 
 
-    <!-- =====================================================
+    <!-- =========================
          HERO
-    ===================================================== -->
+    ========================= -->
 
     <main>
 
-
         <section id="pocetna" class="hero">
-
 
             <div class="hero-content">
 
-
-                <div
-                    class="hero-kicker"
-                    data-sr="KURS TURSKOG JEZIKA"
-                    data-tr="TÜRKÇE DİL KURSU"
-                >
+                <div class="hero-kicker"
+                     data-sr="KURS TURSKOG JEZIKA"
+                     data-tr="TÜRKÇE DİL KURSU">
                     KURS TURSKOG JEZIKA
                 </div>
 
 
                 <h1>
 
-                    <span
-                        style="
-                            display:block;
-                            font-family:'Cormorant Garamond',serif;
-                            font-size:inherit;
-                            letter-spacing:inherit;
-                            font-weight:500;
-                            margin:0;
-                        "
-                        data-sr="TURSKI"
-                        data-tr="TÜRKÇE"
-                    >
-                        TURSKI
-                    </span>
+                    TURSKI
 
-                    <span
-                        data-sr="SA STILOM"
-                        data-tr="ŞIKLIKLA"
-                    >
+                    <span>
                         SA STILOM
                     </span>
 
                 </h1>
 
 
-                <div
-                    class="hero-author"
-                    data-sr="by Marija"
-                    data-tr="by Marija"
-                >
+                <div class="hero-author">
                     by Marija
                 </div>
 
@@ -1542,17 +1659,15 @@
 
                 <div class="hero-description">
 
-                    <span
-                        data-sr="Nauči turski. Razumi ga."
-                        data-tr="Türkçe öğren. Onu anla."
-                    >
-                        Nauči turski. Razumi ga.
+                    <span data-sr="Nauči turski. Razumi ga."
+                          data-tr="Türkçe öğren. Onu anla.">
+                        Nauči turski.
+                        Razumi ga.
                     </span>
 
                     <strong
                         data-sr="Govori ga sa stilom."
-                        data-tr="Şıklıkla konuş."
-                    >
+                        data-tr="Şıklıkla konuş.">
                         Govori ga sa stilom.
                     </strong>
 
@@ -1584,36 +1699,45 @@
 
             </div>
 
+
+            <div class="hero-scroll">
+
+                <span
+                    data-sr="Discover"
+                    data-tr="Keşfet">
+                    Discover
+                </span>
+
+                <div class="scroll-line"></div>
+
+            </div>
+
         </section>
 
 
 
-        <!-- =====================================================
+        <!-- =========================
              INFO BAR
-        ===================================================== -->
+        ========================= -->
 
         <section class="info-bar">
 
 
             <div class="info-item">
 
-                <div class="info-icon">
-                    ♡
-                </div>
+                <div class="info-icon">♡</div>
 
                 <div class="info-text">
 
                     <strong
                         data-sr="Komunikacija"
-                        data-tr="İletişim"
-                    >
+                        data-tr="İletişim">
                         Komunikacija
                     </strong>
 
                     <span
                         data-sr="Govoriš kroz stvarne situacije"
-                        data-tr="Gerçek durumlar üzerinden konuşursun"
-                    >
+                        data-tr="Gerçek durumlar üzerinden konuş">
                         Govoriš kroz stvarne situacije
                     </span>
 
@@ -1622,26 +1746,21 @@
             </div>
 
 
-
             <div class="info-item">
 
-                <div class="info-icon">
-                    ✦
-                </div>
+                <div class="info-icon">✦</div>
 
                 <div class="info-text">
 
                     <strong
                         data-sr="Praktično"
-                        data-tr="Pratik"
-                    >
+                        data-tr="Pratik">
                         Praktično
                     </strong>
 
                     <span
                         data-sr="Učiš ono što zaista koristiš"
-                        data-tr="Gerçekten kullanacağın şeyleri öğrenirsin"
-                    >
+                        data-tr="Gerçekten kullanacağın şeyleri öğren">
                         Učiš ono što zaista koristiš
                     </span>
 
@@ -1650,26 +1769,21 @@
             </div>
 
 
-
             <div class="info-item">
 
-                <div class="info-icon">
-                    ✎
-                </div>
+                <div class="info-icon">✎</div>
 
                 <div class="info-text">
 
                     <strong
                         data-sr="Jasno"
-                        data-tr="Anlaşılır"
-                    >
+                        data-tr="Anlaşılır">
                         Jasno
                     </strong>
 
                     <span
                         data-sr="Bez komplikovane gramatike"
-                        data-tr="Karmaşık gramer olmadan"
-                    >
+                        data-tr="Karmaşık gramer olmadan">
                         Bez komplikovane gramatike
                     </span>
 
@@ -1678,26 +1792,21 @@
             </div>
 
 
-
             <div class="info-item">
 
-                <div class="info-icon">
-                    ♡
-                </div>
+                <div class="info-icon">♡</div>
 
                 <div class="info-text">
 
                     <strong
                         data-sr="Sa stilom"
-                        data-tr="Şıklıkla"
-                    >
+                        data-tr="Şıklıkla">
                         Sa stilom
                     </strong>
 
                     <span
                         data-sr="Prirodni izrazi i turske nijanse"
-                        data-tr="Doğal ifadeler ve Türkçe incelikleri"
-                    >
+                        data-tr="Doğal ifadeler ve Türkçe incelikleri">
                         Prirodni izrazi i turske nijanse
                     </span>
 
@@ -1710,9 +1819,9 @@
 
 
 
-        <!-- =====================================================
+        <!-- =========================
              KURS
-        ===================================================== -->
+        ========================= -->
 
         <section id="kurs" class="section course-section">
 
@@ -1722,8 +1831,7 @@
                 <div
                     class="section-kicker"
                     data-sr="ZAŠTO TURSKI?"
-                    data-tr="NEDEN TÜRKÇE?"
-                >
+                    data-tr="NEDEN TÜRKÇE?">
                     ZAŠTO TURSKI?
                 </div>
 
@@ -1732,9 +1840,9 @@
 
                     <span
                         data-sr="Ne uči turski samo da bi ga znao."
-                        data-tr="Türkçeyi sadece bilmek için öğrenme."
-                    >
-                        Ne uči turski samo da bi ga znao.
+                        data-tr="Türkçeyi sadece bilmek için öğrenme.">
+                        Ne uči turski
+                        samo da bi ga znao.
                     </span>
 
                 </h2>
@@ -1745,21 +1853,18 @@
             </div>
 
 
-
             <div class="course-text">
 
                 <p
                     data-sr="Uči ga da bi mogao da ga koristiš."
-                    data-tr="Onu kullanabilmek için öğren."
-                >
+                    data-tr="Onu kullanabilmek için öğren.">
                     Uči ga da bi mogao da ga koristiš.
                 </p>
 
 
                 <p
                     data-sr="Da naručiš kafu u Istanbulu bez razmišljanja. Da razumeš ljude oko sebe. Da vodiš razgovor. Da razumeš izraze koje Turci zaista koriste."
-                    data-tr="İstanbul'da hiç düşünmeden kahve sipariş edebilmek. Çevrendeki insanları anlayabilmek. Sohbet edebilmek. Türklerin gerçekten kullandığı ifadeleri anlayabilmek."
-                >
+                    data-tr="İstanbul'da hiç düşünmeden kahve sipariş edebilmek. Çevrendeki insanları anlayabilmek. Sohbet edebilmek. Türklerin gerçekten kullandığı ifadeleri anlayabilmek.">
                     Da naručiš kafu u Istanbulu bez razmišljanja.
                     Da razumeš ljude oko sebe.
                     Da vodiš razgovor.
@@ -1769,8 +1874,7 @@
 
                 <p
                     data-sr="Turski nije samo skup pravila. To je jezik koji treba da čuješ, razumeš i počneš da koristiš."
-                    data-tr="Türkçe sadece kurallardan oluşmaz. Onu duyman, anlaman ve kullanmaya başlaman gereken canlı bir dildir."
-                >
+                    data-tr="Türkçe sadece kurallardan ibaret değildir. Duyman, anlaman ve kullanmaya başlaman gereken bir dildir.">
                     Turski nije samo skup pravila.
                     To je jezik koji treba da čuješ,
                     razumeš i počneš da koristiš.
@@ -1781,8 +1885,7 @@
 
                     <span
                         data-sr="„Cilj nije da samo znaš turski. Cilj je da se na turskom osećaš prirodno.“"
-                        data-tr="“Amaç sadece Türkçe bilmek değil. Amaç Türkçe konuşurken kendini doğal hissetmek.”"
-                    >
+                        data-tr="“Amaç sadece Türkçe bilmek değil. Amaç Türkçe konuşurken kendini doğal hissetmek.”">
                         „Cilj nije da samo znaš turski.
                         Cilj je da se na turskom
                         osećaš prirodno.“
@@ -1792,14 +1895,13 @@
 
             </div>
 
-
         </section>
 
 
 
-        <!-- =====================================================
+        <!-- =========================
              MARIJA
-        ===================================================== -->
+        ========================= -->
 
         <section id="marija" class="marija-section">
 
@@ -1811,15 +1913,12 @@
             </div>
 
 
-
             <div class="marija-content">
-
 
                 <div
                     class="section-kicker"
                     data-sr="ĆAO, JA SAM"
-                    data-tr="MERHABA, BEN"
-                >
+                    data-tr="MERHABA, BEN">
                     ĆAO, JA SAM
                 </div>
 
@@ -1834,8 +1933,7 @@
 
                 <p
                     data-sr="Diplomirani turkolog i zaljubljenik u turski jezik."
-                    data-tr="Türkoloji mezunu ve Türkçe tutkunu."
-                >
+                    data-tr="Türk dili ve edebiyatı mezunu ve Türkçe tutkunu.">
                     Diplomirani turkolog i zaljubljenik
                     u turski jezik.
                 </p>
@@ -1843,8 +1941,7 @@
 
                 <p
                     data-sr="Turski je deo mog obrazovanja, ali još više — deo mog svakodnevnog života i komunikacije."
-                    data-tr="Türkçe eğitimimin bir parçası, ama daha da önemlisi günlük hayatımın ve iletişimimin bir parçası."
-                >
+                    data-tr="Türkçe eğitimimin bir parçası, ama daha da önemlisi günlük hayatımın ve iletişimimin bir parçası.">
                     Turski je deo mog obrazovanja,
                     ali još više — deo mog svakodnevnog
                     života i komunikacije.
@@ -1853,8 +1950,7 @@
 
                 <p
                     data-sr="Ovaj kurs nije nastao da bi te zatrpao pravilima, već da bi ti pomogao/la da razumeš jezik i koristiš ga prirodno i samouvereno."
-                    data-tr="Bu kurs seni kurallara boğmak için değil, dili anlamana ve onu doğal ve özgüvenli bir şekilde kullanmana yardımcı olmak için hazırlandı."
-                >
+                    data-tr="Bu kurs seni kurallara boğmak için değil, dili anlamana ve doğal, özgüvenli bir şekilde kullanmana yardımcı olmak için hazırlandı.">
                     Ovaj kurs nije nastao da bi te
                     zatrpao pravilima, već da bi ti
                     pomogao/la da razumeš jezik i koristiš
@@ -1864,8 +1960,7 @@
 
                 <p
                     data-sr="Verujem da se jezik uči korak po korak, kroz praksu, ponavljanje i uživanje u procesu."
-                    data-tr="Bir dilin adım adım, pratik yaparak, tekrar ederek ve bu sürecin tadını çıkararak öğrenildiğine inanıyorum."
-                >
+                    data-tr="Bir dilin adım adım, pratik yaparak, tekrar ederek ve süreçten keyif alarak öğrenildiğine inanıyorum.">
                     Verujem da se jezik uči korak po korak,
                     kroz praksu, ponavljanje i uživanje
                     u procesu.
@@ -1875,35 +1970,30 @@
                 <p
                     class="signature"
                     data-sr="Hajde da turski naučimo — sa stilom. ♡"
-                    data-tr="Hadi Türkçeyi birlikte öğrenelim — şıklıkla. ♡"
-                >
+                    data-tr="Hadi Türkçeyi birlikte — şıklıkla öğrenelim. ♡">
                     Hajde da turski naučimo —
                     sa stilom. ♡
                 </p>
 
-
             </div>
-
 
         </section>
 
 
 
-        <!-- =====================================================
+        <!-- =========================
              METOD
-        ===================================================== -->
+        ========================= -->
 
         <section id="metod" class="method-section">
 
 
             <div class="method-header">
 
-
                 <div
                     class="section-kicker"
                     data-sr="KAKO UČIMO?"
-                    data-tr="NASIL ÖĞRENİYORUZ?"
-                >
+                    data-tr="NASIL ÖĞRENİYORUZ?">
                     KAKO UČIMO?
                 </div>
 
@@ -1912,8 +2002,7 @@
 
                     <span
                         data-sr="Jednostavno. Praktično. Prirodno."
-                        data-tr="Basit. Pratik. Doğal."
-                    >
+                        data-tr="Basit. Pratik. Doğal.">
                         Jednostavno.
                         Praktično.
                         Prirodno.
@@ -1924,23 +2013,22 @@
 
                 <div
                     class="gold-line"
-                    style="margin:25px auto;"
-                ></div>
+                    style="margin:25px auto;">
+                </div>
 
 
                 <p
-                    style="color:rgba(255,255,255,.6);line-height:1.8;font-size:13px;"
                     data-sr="Bez zatrpavanja informacijama. Bez učenja napamet bez razloga. Fokus je na tome da turski stvarno počneš da koristiš."
-                    data-tr="Bilgi bombardımanı olmadan. Gereksiz ezberler olmadan. Odak noktamız Türkçeyi gerçekten kullanmaya başlaman."
-                >
+                    data-tr="Bilgi bombardımanı yok. Gereksiz ezber yok. Odak noktamız Türkçeyi gerçekten kullanmaya başlaman.">
+
                     Bez zatrpavanja informacijama.
                     Bez učenja napamet bez razloga.
                     Fokus je na tome da turski
                     stvarno počneš da koristiš.
+
                 </p>
 
             </div>
-
 
 
             <div class="method-grid">
@@ -1948,21 +2036,17 @@
 
                 <div class="method-card">
 
-                    <div class="method-number">
-                        01
-                    </div>
+                    <div class="method-number">01</div>
 
                     <h3
                         data-sr="Razumi"
-                        data-tr="Anla"
-                    >
+                        data-tr="Anla">
                         Razumi
                     </h3>
 
                     <p
                         data-sr="Upoznaj strukturu jezika i shvati kako turski zapravo funkcioniše."
-                        data-tr="Dilin yapısını tanı ve Türkçenin nasıl çalıştığını gerçekten anla."
-                    >
+                        data-tr="Dilin yapısını öğren ve Türkçenin nasıl çalıştığını anla.">
                         Upoznaj strukturu jezika
                         i shvati kako turski
                         zapravo funkcioniše.
@@ -1971,24 +2055,19 @@
                 </div>
 
 
-
                 <div class="method-card">
 
-                    <div class="method-number">
-                        02
-                    </div>
+                    <div class="method-number">02</div>
 
                     <h3
                         data-sr="Vežbaj"
-                        data-tr="Pratik Yap"
-                    >
+                        data-tr="Pratik Yap">
                         Vežbaj
                     </h3>
 
                     <p
                         data-sr="Nauči fraze i izraze koje možeš odmah da koristiš."
-                        data-tr="Hemen kullanabileceğin kalıp ve ifadeleri öğren."
-                    >
+                        data-tr="Hemen kullanabileceğin ifadeleri ve kalıpları öğren.">
                         Nauči fraze i izraze
                         koje možeš odmah
                         da koristiš.
@@ -1997,24 +2076,19 @@
                 </div>
 
 
-
                 <div class="method-card">
 
-                    <div class="method-number">
-                        03
-                    </div>
+                    <div class="method-number">03</div>
 
                     <h3
                         data-sr="Govori"
-                        data-tr="Konuş"
-                    >
+                        data-tr="Konuş">
                         Govori
                     </h3>
 
                     <p
                         data-sr="Kroz praktične situacije počni da sklapaš svoje rečenice."
-                        data-tr="Pratik durumlar üzerinden kendi cümlelerini kurmaya başla."
-                    >
+                        data-tr="Pratik durumlar üzerinden kendi cümlelerini kurmaya başla.">
                         Kroz praktične situacije
                         počni da sklapaš
                         svoje rečenice.
@@ -2023,24 +2097,19 @@
                 </div>
 
 
-
                 <div class="method-card">
 
-                    <div class="method-number">
-                        04
-                    </div>
+                    <div class="method-number">04</div>
 
                     <h3
                         data-sr="Zavoli"
-                        data-tr="Sev"
-                    >
+                        data-tr="Sev">
                         Zavoli
                     </h3>
 
                     <p
                         data-sr="Kada razumeš jezik, počinješ da uživaš u njemu."
-                        data-tr="Dili anladığında, ondan keyif almaya başlarsın."
-                    >
+                        data-tr="Dili anladığında ondan keyif almaya başlarsın.">
                         Kada razumeš jezik,
                         počinješ da uživaš
                         u njemu.
@@ -2051,14 +2120,47 @@
 
             </div>
 
+        </section>
+
+
+
+        <!-- =========================
+             ISTANBUL
+        ========================= -->
+
+        <section class="istanbul-section">
+
+            <div class="istanbul-content">
+
+                <div
+                    class="small"
+                    data-sr="BIR DIL, BIR DÜNYA"
+                    data-tr="BİR DİL, BİR DÜNYA">
+                    BIR DIL, BIR DÜNYA
+                </div>
+
+
+                <h2>
+                    İstanbul
+                </h2>
+
+
+                <p
+                    data-sr="Jezik je najlepši kada postane deo tvog života."
+                    data-tr="Bir dil, hayatının bir parçası olduğunda en güzeldir.">
+                    Jezik je najlepši kada
+                    postane deo tvog života.
+                </p>
+
+            </div>
 
         </section>
 
 
 
-        <!-- =====================================================
+        <!-- =========================
              CONTACT
-        ===================================================== -->
+        ========================= -->
 
         <section id="kontakt" class="contact-section">
 
@@ -2066,8 +2168,7 @@
             <div
                 class="section-kicker"
                 data-sr="MERHABA"
-                data-tr="MERHABA"
-            >
+                data-tr="MERHABA">
                 MERHABA
             </div>
 
@@ -2076,8 +2177,7 @@
 
                 <span
                     data-sr="Spreman za prvi korak?"
-                    data-tr="İlk adımı atmaya hazır mısın?"
-                >
+                    data-tr="İlk adım için hazır mısın?">
                     Spreman za prvi korak?
                 </span>
 
@@ -2089,8 +2189,7 @@
 
             <p
                 data-sr="Učimo turski zajedno — jasno, praktično i sa stilom."
-                data-tr="Türkçeyi birlikte öğrenelim — anlaşılır, pratik ve şık bir şekilde."
-            >
+                data-tr="Türkçeyi birlikte — anlaşılır, pratik ve şık bir şekilde öğrenelim.">
                 Učimo turski zajedno —
                 jasno, praktično i sa stilom.
             </p>
@@ -2105,7 +2204,6 @@
                 Kontaktiraj Mariju
             </a>
 
-
         </section>
 
 
@@ -2113,9 +2211,9 @@
 
 
 
-    <!-- =====================================================
+    <!-- =========================
          FOOTER
-    ===================================================== -->
+    ========================= -->
 
     <footer>
 
@@ -2136,10 +2234,36 @@
         <p
             class="footer-description"
             data-sr="Kurs turskog jezika by Marija"
-            data-tr="Marija ile Türkçe Dil Kursu"
-        >
+            data-tr="Marija ile Türkçe Dil Kursu">
             Kurs turskog jezika by Marija
         </p>
+
+
+        <!-- FOOTER SOCIALS -->
+
+        <div class="footer-socials">
+
+            <a
+                href="https://www.facebook.com/marija.djokic.33"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-social"
+                title="Facebook"
+            >
+                f
+            </a>
+
+            <a
+                href="https://www.instagram.com/maka_djordjevic13/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-social"
+                title="Instagram"
+            >
+                ◎
+            </a>
+
+        </div>
 
 
         <div class="footer-links">
@@ -2147,40 +2271,35 @@
             <a
                 href="#pocetna"
                 data-sr="Početna"
-                data-tr="Ana Sayfa"
-            >
+                data-tr="Ana Sayfa">
                 Početna
             </a>
 
             <a
                 href="#kurs"
                 data-sr="Kurs"
-                data-tr="Kurs"
-            >
+                data-tr="Kurs">
                 Kurs
             </a>
 
             <a
                 href="#marija"
                 data-sr="O Mariji"
-                data-tr="Marija Hakkında"
-            >
+                data-tr="Marija Hakkında">
                 O Mariji
             </a>
 
             <a
                 href="#metod"
                 data-sr="Kako učimo"
-                data-tr="Nasıl Öğreniyoruz"
-            >
+                data-tr="Nasıl Öğreniyoruz">
                 Kako učimo
             </a>
 
             <a
                 href="#kontakt"
                 data-sr="Kontakt"
-                data-tr="İletişim"
-            >
+                data-tr="İletişim">
                 Kontakt
             </a>
 
@@ -2196,69 +2315,59 @@
 
 
 
-    <!-- =====================================================
-         LANGUAGE JAVASCRIPT
-    ===================================================== -->
+    <!-- =========================
+         LANGUAGE SCRIPT
+    ========================= -->
 
     <script>
 
         function setLanguage(lang) {
 
-            document.documentElement.lang = lang === "sr" ? "sr" : "tr";
+            document.documentElement.lang = lang;
 
-            const elements = document.querySelectorAll("[data-sr][data-tr]");
+            const elements = document.querySelectorAll('[data-sr][data-tr]');
 
             elements.forEach(function(element) {
 
-                const text = element.getAttribute(
-                    lang === "sr" ? "data-sr" : "data-tr"
-                );
-
-                if (text) {
-                    element.textContent = text;
-                }
+                element.innerHTML =
+                    lang === 'tr'
+                        ? element.getAttribute('data-tr')
+                        : element.getAttribute('data-sr');
 
             });
 
 
-            const buttons = document.querySelectorAll(".language-button");
+            document.getElementById('srBtn')
+                .classList.toggle('active', lang === 'sr');
 
-            buttons.forEach(function(button) {
-
-                button.classList.remove("active");
-
-                if (button.getAttribute("data-lang") === lang) {
-                    button.classList.add("active");
-                }
-
-            });
+            document.getElementById('trBtn')
+                .classList.toggle('active', lang === 'tr');
 
 
-            if (lang === "tr") {
+            if (lang === 'tr') {
 
                 document.title =
-                    "Türkçe Şıklıkla | Marija ile Türkçe Kursu";
+                    'Türkçe Şıklığı | Marija ile Türkçe Dil Kursu';
 
             } else {
 
                 document.title =
-                    "Turski sa stilom | Kurs turskog jezika by Marija";
+                    'Turski sa stilom | Kurs turskog jezika by Marija';
 
             }
 
 
-            localStorage.setItem("selectedLanguage", lang);
+            localStorage.setItem('language', lang);
+
         }
 
 
-        document.addEventListener("DOMContentLoaded", function() {
+        /* Zapamti izabrani jezik */
 
-            const savedLanguage =
-                localStorage.getItem("selectedLanguage") || "sr";
+        const savedLanguage =
+            localStorage.getItem('language') || 'sr';
 
-            setLanguage(savedLanguage);
-
-        });
+        setLanguage(savedLanguage);
 
     </script>
 
