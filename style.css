@@ -1,0 +1,903 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Parisienne&display=swap');
+
+:root {
+    --cream: #f5eee4;
+    --cream-dark: #e8dccb;
+    --burgundy: #71191b;
+    --burgundy-dark: #4b0f11;
+    --gold: #b5965b;
+    --gold-light: #d2b77b;
+    --dark: #211d1a;
+    --white: #fffaf3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;
+    z-index: 20;
+
+    color: var(--dark);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+}
+
+.logo span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    letter-spacing: 3px;
+    color: var(--burgundy);
+}
+
+.logo small {
+    margin-top: 7px;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 1px;
+    background: var(--burgundy);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.nav-button {
+    padding: 15px 25px;
+    background: var(--burgundy);
+    color: white;
+
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background: var(--burgundy-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 47% 53%;
+
+    position: relative;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 140px 8% 80px;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(75px, 8vw, 135px);
+    font-weight: 500;
+    line-height: 0.72;
+
+    letter-spacing: -4px;
+    color: var(--burgundy);
+}
+
+.hero h1 span {
+    display: block;
+
+    margin-top: 28px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(31px, 3.5vw, 55px);
+    font-weight: 300;
+
+    letter-spacing: 10px;
+    color: var(--dark);
+}
+
+.author {
+    margin-top: 25px;
+
+    font-family: 'Parisienne', cursive;
+    font-size: 38px;
+    color: var(--burgundy);
+}
+
+.gold-line {
+    width: 180px;
+    height: 1px;
+
+    background: var(--gold);
+
+    margin: 25px 0;
+}
+
+.hero-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    line-height: 1.25;
+}
+
+.hero-text strong {
+    font-family: 'Parisienne', cursive;
+    font-weight: 400;
+    color: var(--burgundy);
+    font-size: 31px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 180px;
+    padding: 17px 25px;
+
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.button.primary {
+    background: var(--burgundy);
+    color: white;
+}
+
+.button.primary:hover {
+    background: var(--burgundy-dark);
+    transform: translateY(-3px);
+}
+
+.button.secondary {
+    border: 1px solid var(--gold);
+    color: var(--burgundy);
+}
+
+.button.secondary:hover {
+    background: var(--gold);
+    color: white;
+}
+
+.button.gold {
+    background: var(--gold);
+    color: white;
+}
+
+.button.gold:hover {
+    background: var(--burgundy);
+}
+
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.hero-image {
+    position: relative;
+
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(245,238,228,1) 0%,
+            rgba(245,238,228,0.1) 20%,
+            rgba(0,0,0,0.05) 100%
+        ),
+        url('https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1800&q=85');
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(245,238,228,0.9) 0%,
+        transparent 25%
+    );
+}
+
+.hero-card {
+    position: absolute;
+
+    right: 8%;
+    bottom: 10%;
+
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+
+    z-index: 5;
+}
+
+.coffee {
+    width: 95px;
+    height: 95px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.book {
+    width: 190px;
+    height: 250px;
+
+    background: #e7d9c6;
+
+    padding: 35px 20px;
+
+    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(-4deg);
+
+    color: var(--burgundy);
+}
+
+.book span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+}
+
+.book strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 31px;
+}
+
+.book small {
+    margin-top: 20px;
+    font-family: 'Parisienne', cursive;
+    font-size: 22px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    background: var(--burgundy);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    color: white;
+
+    padding: 35px 5%;
+}
+
+.feature {
+    text-align: center;
+
+    padding: 15px 25px;
+
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    font-size: 28px;
+    color: var(--gold-light);
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-weight: 500;
+
+    margin-bottom: 8px;
+}
+
+.feature p {
+    font-size: 11px;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro-section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 150px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+
+    align-items: center;
+}
+
+.section-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(45px, 5vw, 75px);
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    color: var(--burgundy);
+}
+
+.intro-text {
+    font-size: 16px;
+    line-height: 2;
+
+    color: #5e5750;
+}
+
+.intro-text p {
+    margin-bottom: 25px;
+}
+
+.intro-text strong {
+    color: var(--burgundy);
+}
+
+
+/* =========================
+   MARIJA
+========================= */
+
+.marija-section {
+    background: #e9ddce;
+
+    padding: 120px 10%;
+
+    display: grid;
+    grid-template-columns: 45% 55%;
+
+    align-items: center;
+}
+
+.marija-image {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-placeholder {
+    width: 370px;
+    height: 500px;
+
+    background:
+        linear-gradient(rgba(113,25,27,0.15), rgba(113,25,27,0.15)),
+        url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=85');
+
+    background-size: cover;
+    background-position: center;
+
+    border: 12px solid var(--cream);
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding-bottom: 20px;
+
+    color: transparent;
+}
+
+.marija-content {
+    max-width: 600px;
+}
+
+.marija-content h2 {
+    font-family: 'Parisienne', cursive;
+
+    font-size: 75px;
+    font-weight: 400;
+
+    color: var(--burgundy);
+}
+
+.marija-content p {
+    font-size: 15px;
+    line-height: 1.9;
+
+    color: #5c554e;
+
+    margin-bottom: 20px;
+}
+
+.signature {
+    font-family: 'Parisienne', cursive;
+    font-size: 28px !important;
+    color: var(--burgundy) !important;
+}
+
+
+/* =========================
+   BOOK
+========================= */
+
+.book-section {
+    padding: 120px 10%;
+
+    background: var(--burgundy);
+
+    color: white;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    align-items: center;
+}
+
+.book-content {
+    max-width: 520px;
+}
+
+.book-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 75px;
+    line-height: 0.9;
+
+    font-weight: 500;
+}
+
+.book-content > p:not(.eyebrow) {
+    margin: 25px 0;
+
+    font-size: 16px;
+}
+
+.book-content ul {
+    list-style: none;
+    margin: 30px 0;
+}
+
+.book-content li {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.book-content li::before {
+    content: "✓";
+    color: var(--gold-light);
+    margin-right: 12px;
+}
+
+.book-preview {
+    display: flex;
+    justify-content: center;
+}
+
+.book-cover {
+    width: 300px;
+    height: 410px;
+
+    background: var(--cream);
+
+    color: var(--burgundy);
+
+    box-shadow: 20px 25px 60px rgba(0,0,0,0.35);
+
+    transform: rotate(4deg);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-cover span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+}
+
+.book-cover strong {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.book-cover small {
+    margin-top: 30px;
+
+    font-family: 'Parisienne', cursive;
+    font-size: 25px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    text-align: center;
+
+    padding: 150px 20px;
+}
+
+.contact-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(50px, 6vw, 85px);
+
+    font-weight: 500;
+
+    color: var(--burgundy);
+}
+
+.contact-section > p:not(.eyebrow) {
+    margin: 20px auto 35px;
+
+    max-width: 550px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--burgundy-dark);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px 35px;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.footer-logo span {
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 6px;
+
+    margin-top: 8px;
+}
+
+footer > p {
+    opacity: 0.6;
+
+    font-size: 11px;
+
+    margin-top: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+
+    gap: 30px;
+
+    margin: 35px 0;
+}
+
+.footer-links a {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-links a:hover {
+    color: var(--gold-light);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+
+    padding-top: 25px;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    nav {
+        gap: 15px;
+    }
+
+    .navbar {
+        padding: 0 3%;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        min-height: 650px;
+    }
+
+    .hero-image {
+        min-height: 600px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature:nth-child(2) {
+        border-right: none;
+    }
+
+    .intro-section,
+    .marija-section,
+    .book-section {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .marija-content {
+        margin: auto;
+    }
+
+    .book-content {
+        margin: auto;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: 80px;
+        padding: 0 20px;
+    }
+
+    .logo span {
+        font-size: 22px;
+    }
+
+    .logo small {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .nav-button {
+        padding: 12px 15px;
+        font-size: 9px;
+    }
+
+    .hero-content {
+        padding: 130px 25px 70px;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .hero h1 span {
+        font-size: 27px;
+        letter-spacing: 6px;
+    }
+
+    .hero-image {
+        min-height: 500px;
+    }
+
+    .hero-card {
+        right: 20px;
+        bottom: 30px;
+    }
+
+    .book {
+        width: 145px;
+        height: 200px;
+    }
+
+    .coffee {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .feature {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        padding: 25px;
+    }
+
+    .feature:last-child {
+        border-bottom: none;
+    }
+
+    .intro-section,
+    .marija-section,
+    .book-section {
+        padding: 90px 25px;
+    }
+
+    .marija-image {
+        order: 1;
+    }
+
+    .marija-content {
+        order: 2;
+    }
+
+    .photo-placeholder {
+        width: 280px;
+        height: 390px;
+    }
+
+    .marija-content h2 {
+        font-size: 60px;
+    }
+
+    .book-content h2 {
+        font-size: 60px;
+    }
+
+    .book-cover {
+        width: 240px;
+        height: 330px;
+    }
+
+    .book-cover span {
+        font-size: 38px;
+    }
+
+    .book-cover strong {
+        font-size: 24px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
